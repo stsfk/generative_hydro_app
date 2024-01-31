@@ -148,7 +148,7 @@ nse = round(nse, 3)
 f"Performance of the generated model instance: :red[**KGE={kge}**], :red[**NSE={nse}**]."
 
 # Display data
-st.write("The predicted and observed discharge:")
+st.write("The predicted and observed discharge data without the warm-up period:")
 st.write(chart_data)
 
 # References:
