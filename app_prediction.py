@@ -134,9 +134,11 @@ st.subheader("Comparison of simulated and observed hydrographs.")
 st.markdown("*Select paramater values from the sidebar to generate model instances.*")
 st.markdown("*[Optional] Upload climate forcing and discharge time series data. If no data are uploaded, data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used.*")
 
+
 st.line_chart(chart_data[0:dispaly_days], color=["#0457ac", "#a7e237"])
 
 # Prediction accuracy
+
 kge = HydroErr.kge_2009(
     simulated_array=pred, observed_array=input_data[warm_up:, 3]
 )
@@ -148,10 +150,14 @@ nse = round(nse, 3)
 f"Performance of the generated model instance: :red[**KGE={kge}**], :red[**NSE={nse}**]."
 
 # Display data
+st.divider()
+
 st.write("The predicted and observed discharge data without the warm-up period:")
 st.write(chart_data)
 
 # References:
+st.divider()
+
 st.markdown(
     "The method for developing is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
 )
