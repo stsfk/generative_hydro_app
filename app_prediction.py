@@ -107,7 +107,7 @@ dispaly_days = st.sidebar.slider(
     "How many days of hydrograph to display?",
     min_value=1,
     max_value=x.shape[1]-warm_up,
-    value=max(1, x.shape[1]-warm_up),
+    value=min(1500, x.shape[1]-warm_up),
 )
 
 
@@ -132,7 +132,7 @@ chart_data = pd.DataFrame(data=d)
 # Plotting
 st.subheader("Comparison of simulated and observed hydrographs.")
 st.markdown("*Select paramater values from the sidebar to generate model instances.*")
-st.markdown("*[Optional] Upload climate forcing and discharge time series data. The data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used if no data are uploaded.*")
+st.markdown("*[Optional] Upload climate forcing and discharge time series data. If no data are uploaded, data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used.*")
 
 st.line_chart(chart_data[0:dispaly_days], color=["#0457ac", "#a7e237"])
 
