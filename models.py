@@ -84,12 +84,12 @@ class LSTM_decoder(nn.Module):
 
         return out
 
-    def decode(self, code, x):
+    def decode(self, code, x, base_length=365):
 
         code = code.expand(x.shape[1], -1, -1).transpose(0, 1)
 
         x = torch.cat((code, x), 2)
-        out = self.forward(x).squeeze()
+        out = self.forward(x, base_length).squeeze()
 
         return out
 

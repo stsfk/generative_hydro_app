@@ -12,7 +12,7 @@ import numpy as np
 
 import HydroErr
 
-# load model
+# load model and data
 embedding = torch.load(
     "data/final_lstm_embedding_test.pt", map_location=torch.device("cpu")
 )
@@ -23,27 +23,13 @@ decoder = torch.load(
 embedding.eval()
 decoder.eval()
 
+data_train = np.genfromtxt("./data/app_train.csv", delimiter=",")
+x = torch.from_numpy(data_train[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
+x = x[0:1500]
 
-# Input time series 
+# model parameter input
 st.sidebar.markdown(
-    "## Upload climate forcing and discharge time series data [Optional]."
-)
-
-uploaded_file = st.sidebar.file_uploader(
-    "Select a comma-separated CSV file with no headers. The four columns are P, T, PET, and Q."
-)
-
-if uploaded_file is not None:
-    input_data = np.genfromtxt(uploaded_file, delimiter=",")
-    x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
-else:
-    input_data = np.genfromtxt("./data/app_train.csv", delimiter=",")
-    x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
-
-
-# input parameter values
-st.sidebar.markdown(
-    "## Select the eight parameter values below to generate a model instance that can be used for hydrological prediction."
+    "## Select the eight parameter values to generate a model instance that can be used for hydrological prediction."
 )
 number1 = st.sidebar.slider(
     "Select parameter 1",
@@ -89,29 +75,6 @@ number8 = st.sidebar.slider(
 )
 
 
-# input warm-up period
-st.sidebar.markdown("## Select a warm-up period.")
-
-warm_up = st.sidebar.number_input(
-    "How many days of input are used for warm up?",
-    min_value=0,
-    max_value=x.shape[1],
-    value=min(365, x.shape[1]),
-)
-
-
-# input display period
-st.sidebar.markdown("## Select the hydrograph length to display.")
-
-dispaly_days = st.sidebar.slider(
-    "How many days of hydrograph to display?",
-    min_value=1,
-    max_value=x.shape[1]-warm_up,
-    value=max(1, x.shape[1]-warm_up),
-)
-
-
-# prediction
 solution = np.array(
     [number1, number2, number3, number4, number5, number6, number7, number8]
 )
@@ -119,12 +82,11 @@ solution = np.array(
 solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32)
 solution = solution.expand(x.shape[0], -1)
 
-pred = decoder.decode(solution, x, base_length=warm_up).view(-1).detach().cpu().numpy()
-
-# process prediction result
+# Prediction
+pred = decoder.decode(solution, x).view(-1).detach().cpu().numpy()
 d = {
     "Simulated [mm/day]": pred.tolist(),
-    "Observation [mm/day]": input_data[warm_up:, 3].tolist(),
+    "Observation [mm/day]": data_train[365:, 3].tolist(),
 }
 
 chart_data = pd.DataFrame(data=d)
@@ -132,31 +94,30 @@ chart_data = pd.DataFrame(data=d)
 # Plotting
 st.subheader("Comparison of simulated and observed hydrographs.")
 st.markdown("*Select paramater values from the sidebar to generate model instances.*")
-st.markdown("*[Optional] Upload climate forcing and discharge time series data. The data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used if no data are uploaded.*")
 
-st.line_chart(chart_data[0:dispaly_days], color=["#0457ac", "#a7e237"])
+st.markdown("Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500)")
+st.line_chart(chart_data[0:1000], color=["#0457ac", "#a7e237"])
 
 # Prediction accuracy
 kge = HydroErr.kge_2009(
-    simulated_array=pred, observed_array=input_data[warm_up:, 3]
+    simulated_array=pred[0:1000], observed_array=data_train[365:1365:, 3]
 )
 kge = round(kge, 3)
 
-nse = HydroErr.nse(simulated_array=pred, observed_array=input_data[warm_up:, 3])
+nse = HydroErr.nse(
+    simulated_array=pred[0:1000], observed_array=data_train[365:1365:, 3]
+)
 nse = round(nse, 3)
 
-f"Performance of the generated model instance: :red[**KGE={kge}**], :red[**NSE={nse}**]."
+f"Performance of the generated model instance: **KGE={kge}**, **NSE={nse}**."
 
-# Display data
-st.write("The predicted and observed discharge:")
-st.write(chart_data)
+# Reference:
 
-# References:
 st.markdown(
     "The method for developing is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
 )
 st.caption(
-    "The Fish River data was derived from the [CAMELS dataset](https://ral.ucar.edu/solutions/products/camels), which was further proceeded by [Knoben et al. (2020)](http://dx.doi.org/10.1029/2019WR025975)."
+    "The data are derived from the [CAMELS dataset](https://ral.ucar.edu/solutions/products/camels), and further proceeded by [Knoben et al. (2020)](http://dx.doi.org/10.1029/2019WR025975)."
 )
 
 st.markdown(
