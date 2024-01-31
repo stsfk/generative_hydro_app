@@ -15,9 +15,13 @@ import HydroErr
 import pygad
 
 # write title texts
-st.subheader("Search the parameter space to identify optimal model instances -- hydrological model calibration.")
+st.subheader("Search the parameter space to the identify optimal model instances -- hydrological model calibration.")
 st.markdown(
     "*[Optional] Upload climate forcing and discharge time series data for calibration and test periods. If no data are uploaded, data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used. The optimization problem is solved using the genetic algorithm (GA).*"
+)
+
+st.markdown(
+    "Click the :blue[\"Run optimization\"] bottom to see calibration results, simulated hydrographs, predictions, etc."
 )
 
 # load model
@@ -153,12 +157,14 @@ fn_cal = Objective_builder(x_cal, y_cal)
 fn_test = Objective_builder(x_test, y_test)
 
 
-# Identifying optimal number of generations
+# run optimization
+if "clicked" not in st.session_state:
+    st.session_state.clicked = False
 
 progress_text = "Optimization in progress. Please wait."
 
-
-my_bar = st.progress(0, text=progress_text)
+if st.session_state.clicked:
+    my_bar = st.progress(0, text=progress_text)
 
 
 def on_generation(instance):
@@ -182,16 +188,12 @@ ga_instance = pygad.GA(
     on_generation=on_generation,
 )
 
-# run optimization
-if "clicked" not in st.session_state:
-    st.session_state.clicked = False
-
 
 def click_button():
     st.session_state.clicked = True
 
 
-st.button("Run optimization", on_click=click_button)
+st.button(":blue[Run optimization]", on_click=click_button)
 
 if st.session_state.clicked:
     ga_instance.run()
@@ -202,3 +204,18 @@ if st.session_state.clicked:
     f"Performance of the optimal (i.e., calibrated) model instance: :red[**KGE={kge_cal}**], :red[**Test KGE={kge_test}**]."
 
     st.session_state.clicked = False
+
+# References:
+st.divider()
+
+st.markdown(
+    "The method for developing generative hydrological model is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
+)
+st.caption(
+    "The Fish River data was derived from the [CAMELS dataset](https://ral.ucar.edu/solutions/products/camels), which was further proceeded by [Knoben et al. (2020)](http://dx.doi.org/10.1029/2019WR025975)."
+)
+
+st.markdown(
+    '<a href="mailto:yyang90@connect.hku.hk">Contact the authors. </a>',
+    unsafe_allow_html=True,
+)
