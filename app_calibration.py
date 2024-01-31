@@ -20,6 +20,8 @@ st.markdown(
     "*[Optional] Upload climate forcing and discharge time series data for calibration and test periods. If no data are uploaded, data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used. The optimization problem is solved using the genetic algorithm (GA).*"
 )
 
+st.markdown("*Set the GA parameters from the sidebar.*")
+
 st.markdown(
     "Click the :blue[\"Run optimization\"] bottom to see calibration results, simulated hydrographs, predictions, etc."
 )
