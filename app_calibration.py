@@ -23,7 +23,7 @@ st.markdown(
 st.markdown("*Set the GA parameters from the sidebar.*")
 
 st.markdown(
-    "Click the :blue[\"Run optimization\"] bottom to see calibration results, simulated hydrographs, predictions, etc."
+    "Click the :blue[\"Run optimization\"] button to see calibration results, simulated hydrographs, predictions, etc."
 )
 
 # load model
