@@ -139,6 +139,31 @@ class Objective_builder:
         ob = self.y.view(-1).detach().cpu().numpy()[warm_up:]
 
         return HydroErr.kge_2009(simulated_array=pred, observed_array=ob)
+    
+    def pred(self, solution):
+        # numpy to torch tensor
+        solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32)
+        solution = solution.expand(self.x.shape[0], -1)
+
+        # BASE_LENGTH is from global
+        pred = (
+            decoder.decode(solution, self.x, base_length=warm_up)
+            .view(-1)
+            .detach()
+            .cpu()
+            .numpy()
+        )
+
+        ob = self.y.view(-1).detach().cpu().numpy()[warm_up:]
+        
+        d = {
+            "Simulated [mm/day]": pred.tolist(),
+            "Observation [mm/day]": ob.tolist(),
+        }
+
+        chart_data = pd.DataFrame(data=d)
+
+        return chart_data
 
 
 # Hyperparameters of GA
@@ -203,9 +228,35 @@ if st.session_state.clicked:
     kge_cal = round(ga_instance.best_solution()[1], 3)
     kge_test = round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
 
-    f"Performance of the optimal (i.e., calibrated) model instance: :red[**KGE={kge_cal}**], :red[**Test KGE={kge_test}**]."
+    f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**]."
+    
+    # Show test result:
+    st.divider()
+    st.write("### The *test period* predicted and observed discharge data without the warm-up period:")
 
+    chart_test=fn_test.pred(ga_instance.best_solution()[0])
+    
+    st.line_chart(chart_test, color=["#0457ac", "#a7e237"])
+    f":red[**Test KGE={kge_test}**]."
+
+    chart_test
+    
+    # Show calibration result:
+    st.divider()
+    st.write("### The *calibration period* predicted and observed discharge data without the warm-up period:")
+
+    chart_cal=fn_cal.pred(ga_instance.best_solution()[0])
+    
+    st.line_chart(chart_cal, color=["#0457ac", "#a7e237"])
+    
+    f":red[**Calibration KGE={kge_cal}**]."
+
+    chart_cal
+    
     st.session_state.clicked = False
+
+
+
 
 # References:
 st.divider()
