@@ -91,7 +91,9 @@ d = {
 
 chart_data = pd.DataFrame(data=d)
 
+# Plotting
 st.title("Comparison of simulated and observed hydrographs.")
+st.markdown("*Select paramater values to create model instances from the sidebar.*")
 
 st.markdown("Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500)")
 st.line_chart(chart_data[0:1000], color=["#0457ac", "#a7e237"])
