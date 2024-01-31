@@ -147,7 +147,19 @@ kge = round(kge, 3)
 nse = HydroErr.nse(simulated_array=pred, observed_array=input_data[warm_up:, 3])
 nse = round(nse, 3)
 
-f"Performance of the generated model instance: :red[**KGE={kge}**], :red[**NSE={nse}**]."
+f"Performance of the generated model instance on all data: :red[**KGE={kge}**], :red[**NSE={nse}**]."
+
+
+# Prediction accuracy of displayed period
+kge2 = HydroErr.kge_2009(
+    simulated_array=pred[0:dispaly_days], observed_array=input_data[warm_up:(dispaly_days+warm_up), 3]
+)
+kge2 = round(kge2, 3)
+
+nse2 = HydroErr.nse(simulated_array=pred[0:dispaly_days], observed_array=input_data[warm_up:(dispaly_days+warm_up), 3])
+nse2 = round(nse2, 3)
+
+f"Performance of the generated model instance in the displayed period: :red[**KGE={kge2}**], :red[**NSE={nse2}**]."
 
 # Display data
 st.divider()
