@@ -171,7 +171,7 @@ st.write(chart_data)
 st.divider()
 
 st.markdown(
-    "The method for developing is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
+    "The method for developing generative hydrological model is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
 )
 st.caption(
     "The Fish River data was derived from the [CAMELS dataset](https://ral.ucar.edu/solutions/products/camels), which was further proceeded by [Knoben et al. (2020)](http://dx.doi.org/10.1029/2019WR025975)."
