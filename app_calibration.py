@@ -232,7 +232,7 @@ if st.session_state.clicked:
     
     # Show test result:
     st.divider()
-    st.write("### The *test period* predicted and observed discharge data without the warm-up period:")
+    st.write("### The *test period* simulated and observed discharge data without the warm-up period:")
 
     chart_test=fn_test.pred(ga_instance.best_solution()[0])
     
@@ -243,7 +243,7 @@ if st.session_state.clicked:
     
     # Show calibration result:
     st.divider()
-    st.write("### The *calibration period* predicted and observed discharge data without the warm-up period:")
+    st.write("### The *calibration period* simulated and observed discharge data without the warm-up period:")
 
     chart_cal=fn_cal.pred(ga_instance.best_solution()[0])
     
