@@ -15,7 +15,9 @@ import HydroErr
 import pygad
 
 # write title texts
-st.subheader("Search the parameter space to the identify optimal model instances -- hydrological model calibration.")
+st.subheader(
+    "Search the parameter space of the generative model to the identify optimal model instances -- hydrological model calibration."
+)
 st.markdown(
     "*[Optional] Upload climate forcing and discharge time series data for calibration and test periods. If no data are uploaded, data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used. The optimization problem is solved using the genetic algorithm (GA).*"
 )
@@ -23,7 +25,7 @@ st.markdown(
 st.markdown("*Set the GA parameters from the sidebar.*")
 
 st.markdown(
-    "Click the :blue[\"Run optimization\"] button to see calibration results, simulated hydrographs, predictions, etc."
+    'Click the :blue["Run optimization"] button to see calibration results, simulated hydrographs, predictions, etc.'
 )
 
 # load model
@@ -139,7 +141,7 @@ class Objective_builder:
         ob = self.y.view(-1).detach().cpu().numpy()[warm_up:]
 
         return HydroErr.kge_2009(simulated_array=pred, observed_array=ob)
-    
+
     def pred(self, solution):
         # numpy to torch tensor
         solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32)
@@ -155,7 +157,7 @@ class Objective_builder:
         )
 
         ob = self.y.view(-1).detach().cpu().numpy()[warm_up:]
-        
+
         d = {
             "Simulated [mm/day]": pred.tolist(),
             "Observation [mm/day]": ob.tolist(),
@@ -188,7 +190,9 @@ fn_test = Objective_builder(x_test, y_test)
 if "clicked" not in st.session_state:
     st.session_state.clicked = False
 
-progress_text = "Optimization in progress. Please wait. It may take from 1 to several minutes."
+progress_text = (
+    "Optimization in progress. Please wait. It may take from 1 to several minutes."
+)
 
 if st.session_state.clicked:
     my_bar = st.progress(0, text=progress_text)
@@ -225,37 +229,51 @@ st.button(":blue[Run optimization]", on_click=click_button)
 if st.session_state.clicked:
     ga_instance.run()
 
+    # Gof
     kge_cal = round(ga_instance.best_solution()[1], 3)
     kge_test = round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
 
     f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**]."
-    
-    # Show test result:
-    st.divider()
-    st.write("### The *test period* simulated and observed discharge data without the warm-up period:")
 
-    chart_test=fn_test.pred(ga_instance.best_solution()[0])
+    st.divider()
+
+    # Optimal model parameters
+    optimal_para = pd.DataFrame(ga_instance.best_solution()[0])
+    optimal_para["Parameter no."] = range(1, len(optimal_para) + 1)
+
+    optimal_para.columns = ["Optimal value", "Parameter number"]
+    st.dataframe(optimal_para[["Parameter number","Optimal value"]], hide_index=True)
     
+    st.divider()
+
+    # Show test result:
+    st.write(
+        "### The *test period* simulated and observed discharge data without the warm-up period:"
+    )
+
+    chart_test = fn_test.pred(ga_instance.best_solution()[0])
+
     st.line_chart(chart_test, color=["#0457ac", "#a7e237"])
     f":red[**Test KGE={kge_test}**]."
 
     chart_test
-    
-    # Show calibration result:
-    st.divider()
-    st.write("### The *calibration period* simulated and observed discharge data without the warm-up period:")
 
-    chart_cal=fn_cal.pred(ga_instance.best_solution()[0])
-    
+    st.divider()
+
+    # Show calibration result:
+    st.write(
+        "### The *calibration period* simulated and observed discharge data without the warm-up period:"
+    )
+
+    chart_cal = fn_cal.pred(ga_instance.best_solution()[0])
+
     st.line_chart(chart_cal, color=["#0457ac", "#a7e237"])
-    
+
     f":red[**Calibration KGE={kge_cal}**]."
 
     chart_cal
-    
+
     st.session_state.clicked = False
-
-
 
 
 # References:
