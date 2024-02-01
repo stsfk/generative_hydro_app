@@ -188,7 +188,7 @@ fn_test = Objective_builder(x_test, y_test)
 if "clicked" not in st.session_state:
     st.session_state.clicked = False
 
-progress_text = "Optimization in progress. Please wait."
+progress_text = "Optimization in progress. Please wait. It may take from 1 to several minutes."
 
 if st.session_state.clicked:
     my_bar = st.progress(0, text=progress_text)
