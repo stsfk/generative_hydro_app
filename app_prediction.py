@@ -134,19 +134,13 @@ chart_data = pd.DataFrame(data=d)
 st.header("Generating hydrological model instances from numerical vectors.")
 st.subheader("Comparison of simulated and observed hydrographs.")
 
-st.markdown("*Select paramater values from the sidebar to generate model instances.*")
-st.markdown(
-    "*Upload catchment data or selected a CAMELS catchment from the sidebar to run simulations.*"
-)
+st.markdown("*Use the sidebar to specify numeric vector values and data sources to generate model instances and run simulations.*")
+
 
 if uploaded_file is not None:
     st.markdown("User supplied catchment data")
 else:
-    st.markdown(f":red[{selected_catchment}, USA], extracted from the Caravan dataset.")
-    st.caption(
-        "Simulation starts from 1981-01-01, and the warm-up period is not shown."
-    )
-
+    st.markdown(f"Simulation results of the :red[{selected_catchment}, USA].")
 
 dispaly_days = st.slider(
     "*Select a period to display:*",
@@ -158,6 +152,11 @@ dispaly_days = st.slider(
 st.line_chart(
     chart_data[dispaly_days[0] : dispaly_days[1]], color=["#0457ac", "#a7e237"]
 )
+
+if uploaded_file is None:
+    st.caption(
+        "Simulation starts from 1981-01-01, and the warm-up period is not shown. Data are from the Caravan dataset."
+    )
 
 
 # Prediction accuracy
