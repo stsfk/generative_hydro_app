@@ -15,8 +15,10 @@ import HydroErr
 import pygad
 
 # write title texts
+st.header("Generative hydrological modeling.")
+
 st.subheader(
-    "Search the parameter space of the generative model to the identify optimal model instances -- hydrological model calibration."
+    "Hydrological model calibration: search the latent vector space of the generative model to identify the optimal values."
 )
 st.markdown(
     "*[Optional] Upload climate forcing and discharge time series data for calibration and test periods. If no data are uploaded, data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used. The optimization problem is solved using the genetic algorithm (GA).*"

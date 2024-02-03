@@ -131,8 +131,8 @@ d = {
 chart_data = pd.DataFrame(data=d)
 
 # Plotting
-st.header("Generative hydrological modeling.")
-st.subheader("Comparison of observed and simulated hydrographs.")
+st.header("Generative Hydrological Modeling")
+st.subheader("Generating hydrological model instances from numerical vectors in the latent space for hydrogical prediction.")
 
 st.markdown("*Use the sidebar to specify the numeric vector values and data sources to generate model instances and run simulations.*")
 
@@ -140,7 +140,7 @@ st.markdown("*Use the sidebar to specify the numeric vector values and data sour
 if uploaded_file is not None:
     st.markdown("User supplied catchment data")
 else:
-    st.markdown(f"Simulation results of the :red[{selected_catchment}, USA].")
+    st.markdown(f"Comparison of simulated and observed hydrographs of the :red[{selected_catchment}, USA].")
 
 dispaly_days = st.slider(
     "*Select a period to display:*",
