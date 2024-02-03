@@ -131,10 +131,10 @@ d = {
 chart_data = pd.DataFrame(data=d)
 
 # Plotting
-st.header("Generating hydrological model instances from numerical vectors.")
-st.subheader("Comparison of simulated and observed hydrographs.")
+st.header("Generative hydrological modeling.")
+st.subheader("Comparison of observed and simulated hydrographs.")
 
-st.markdown("*Use the sidebar to specify numeric vector values and data sources to generate model instances and run simulations.*")
+st.markdown("*Use the sidebar to specify the numeric vector values and data sources to generate model instances and run simulations.*")
 
 
 if uploaded_file is not None:
