@@ -33,21 +33,23 @@ st.sidebar.markdown(
 )
 
 selected_catchment = st.sidebar.selectbox(
-   "Which CAMELS catchment do you want to model?",
-   catchments["gauge_name"].tolist(),
-   index=0,
-   placeholder="Choose a catchment...",
+    "Which CAMELS catchment do you want to model?",
+    catchments["gauge_name"].tolist(),
+    index=0,
+    placeholder="Choose a catchment...",
 )
 
 uploaded_file = st.sidebar.file_uploader(
-    "Upload a comma-separated CSV file with no headers. The four columns are P, T, PET, and Q."
+    "Or, upload a comma-separated CSV file with no headers. The four columns are P, T, PET, and Q."
 )
 
 if uploaded_file is not None:
     input_data = np.genfromtxt(uploaded_file, delimiter=",")
     x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
 else:
-    file_name = catchments[catchments["gauge_name"]==selected_catchment]["data_all"].to_string(index=False)
+    file_name = catchments[catchments["gauge_name"] == selected_catchment][
+        "data_all"
+    ].to_string(index=False)
     input_data = np.genfromtxt(file_name, delimiter=",")
     x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
 
@@ -110,18 +112,6 @@ warm_up = st.sidebar.number_input(
     value=min(365, x.shape[1]),
 )
 
-
-# input display period
-st.sidebar.markdown("## Select the hydrograph length to display.")
-
-dispaly_days = st.sidebar.slider(
-    "How many days of hydrograph to display?",
-    min_value=1,
-    max_value=x.shape[1]-warm_up,
-    value=min(1500, x.shape[1]-warm_up),
-)
-
-
 # prediction
 solution = np.array(
     [number1, number2, number3, number4, number5, number6, number7, number8]
@@ -145,22 +135,34 @@ st.header("Generating hydrological model instances from numerical vectors.")
 st.subheader("Comparison of simulated and observed hydrographs.")
 
 st.markdown("*Select paramater values from the sidebar to generate model instances.*")
-st.markdown("*Upload catchment data or selected a CAMELS catchment from the sidebar to run simulations.*")
+st.markdown(
+    "*Upload catchment data or selected a CAMELS catchment from the sidebar to run simulations.*"
+)
 
 if uploaded_file is not None:
-     st.markdown("User supplied catchment data")
+    st.markdown("User supplied catchment data")
 else:
-     st.markdown(f':red[{selected_catchment}, USA], extracted from the Caravan dataset.')
-     st.caption("Simulation starts from 1981-01-01, and the warm-up period is not shown.")
+    st.markdown(f":red[{selected_catchment}, USA], extracted from the Caravan dataset.")
+    st.caption(
+        "Simulation starts from 1981-01-01, and the warm-up period is not shown."
+    )
 
-st.line_chart(chart_data[0:dispaly_days], color=["#0457ac", "#a7e237"])
+
+dispaly_days = st.slider(
+    "*Select a period to display:*",
+    0,
+    x.shape[1] - warm_up,
+    (0, min(1000, x.shape[1] - warm_up)),
+)
+
+st.line_chart(
+    chart_data[dispaly_days[0] : dispaly_days[1]], color=["#0457ac", "#a7e237"]
+)
 
 
 # Prediction accuracy
 
-kge = HydroErr.kge_2009(
-    simulated_array=pred, observed_array=input_data[warm_up:, 3]
-)
+kge = HydroErr.kge_2009(simulated_array=pred, observed_array=input_data[warm_up:, 3])
 kge = round(kge, 3)
 
 nse = HydroErr.nse(simulated_array=pred, observed_array=input_data[warm_up:, 3])
@@ -171,11 +173,19 @@ f"Performance of the generated model instance on all data: :red[**KGE={kge}**], 
 
 # Prediction accuracy of displayed period
 kge2 = HydroErr.kge_2009(
-    simulated_array=pred[0:dispaly_days], observed_array=input_data[warm_up:(dispaly_days+warm_up), 3]
+    simulated_array=pred[dispaly_days[0] : dispaly_days[1]],
+    observed_array=input_data[
+        (dispaly_days[0] + warm_up) : (dispaly_days[1] + warm_up), 3
+    ],
 )
 kge2 = round(kge2, 3)
 
-nse2 = HydroErr.nse(simulated_array=pred[0:dispaly_days], observed_array=input_data[warm_up:(dispaly_days+warm_up), 3])
+nse2 = HydroErr.nse(
+    simulated_array=pred[dispaly_days[0] : dispaly_days[1]],
+    observed_array=input_data[
+        (dispaly_days[0] + warm_up) : (dispaly_days[1] + warm_up), 3
+    ],
+)
 nse2 = round(nse2, 3)
 
 f"Performance of the generated model instance in the displayed period: :red[**KGE={kge2}**], :red[**NSE={nse2}**]."
@@ -193,7 +203,8 @@ st.markdown(
     "The method for developing generative hydrological model is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
 )
 st.caption(
-    "The CAMELS catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w). License of the dataset can be found in the GitHub page of this web appplication.")
+    "The CAMELS catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w). License of the dataset can be found in the GitHub page of this web appplication."
+)
 
 st.markdown(
     '<a href="mailto:yyang90@connect.hku.hk">Contact the authors. </a>',
