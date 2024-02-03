@@ -16,14 +16,10 @@ import HydroErr
 catchments = pd.read_csv("./data/Caravan-CAMELS/catchments.csv", dtype=str)
 
 # load model
-embedding = torch.load(
-    "data/final_lstm_embedding_test.pt", map_location=torch.device("cpu")
-)
 decoder = torch.load(
     "data/final_lstm_decoder_test.pt", map_location=torch.device("cpu")
 )
 
-embedding.eval()
 decoder.eval()
 
 
@@ -62,43 +58,43 @@ number1 = st.sidebar.slider(
     "Select parameter 1",
     min_value=-11.0,
     max_value=11.0,
-    value=-3.087250730755500161e00,
+    value=0.9585134232789623,
 )
 number2 = st.sidebar.slider(
     "Select parameter 2",
     min_value=-11.0,
     max_value=11.0,
-    value=-2.015848556240998235e00,
+    value=-2.0580436704262253,
 )
 number3 = st.sidebar.slider(
     "Select parameter 3",
     min_value=-11.0,
     max_value=11.0,
-    value=-8.476807188488493239e00,
+    value=3.5006718774709253,
 )
 number4 = st.sidebar.slider(
-    "Select parameter 4", min_value=-11.0, max_value=11.0, value=7.177632989891177928e00
+    "Select parameter 4", min_value=-11.0, max_value=11.0, value=-6.338297923255598
 )
 number5 = st.sidebar.slider(
     "Select parameter 5",
     min_value=-11.0,
     max_value=11.0,
-    value=-3.922460983060631623e-01,
+    value=4.695253736833408,
 )
 number6 = st.sidebar.slider(
     "Select parameter 6",
     min_value=-11.0,
     max_value=11.0,
-    value=1.808005759465904916e-01,
+    value=-6.338297923255598,
 )
 number7 = st.sidebar.slider(
     "Select parameter 7",
     min_value=-11.0,
     max_value=11.0,
-    value=-9.858767797305613811e00,
+    value=-7.455998012226269,
 )
 number8 = st.sidebar.slider(
-    "Select parameter 8", min_value=-11.0, max_value=11.0, value=3.532966359419816627e00
+    "Select parameter 8", min_value=-11.0, max_value=11.0, value=-6.708498042759972
 )
 
 
@@ -132,15 +128,21 @@ chart_data = pd.DataFrame(data=d)
 
 # Plotting
 st.header("Generative Hydrological Modeling")
-st.subheader("Generating hydrological model instances from numerical vectors in the latent space for hydrogical prediction.")
+st.subheader(
+    "Generating hydrological model instances from numerical vectors in the latent space for hydrogical prediction."
+)
 
-st.markdown("*Use the sidebar to specify the numeric vector values and data sources to generate model instances and run simulations.*")
+st.markdown(
+    "*Use the sidebar to specify the numeric vector values and data sources to generate model instances and run simulations.*"
+)
 
-
+    
 if uploaded_file is not None:
     st.markdown("User supplied catchment data")
 else:
-    st.markdown(f"Comparison of simulated and observed hydrographs of the :red[{selected_catchment}, USA].")
+    st.markdown(
+        f"Comparison of simulated and observed hydrographs of the :red[{selected_catchment}, USA]."
+    )
 
 dispaly_days = st.slider(
     "*Select a period to display:*",

@@ -14,17 +14,18 @@ import HydroErr
 
 import pygad
 
+# load catchment list
+catchments = pd.read_csv("./data/Caravan-CAMELS/catchments.csv", dtype=str)
+
 # write title texts
-st.header("Generative hydrological modeling.")
+st.header("Generative hydrological modeling")
 
 st.subheader(
-    "Hydrological model calibration: search the latent vector space of the generative model to identify the optimal values."
-)
-st.markdown(
-    "*[Optional] Upload climate forcing and discharge time series data for calibration and test periods. If no data are uploaded, data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used. The optimization problem is solved using the genetic algorithm (GA).*"
+    "Hydrological model calibration: search the latent space to identify the optimal numerical vectors for generating hydrological model instances."
 )
 
-st.markdown("*Set the GA parameters from the sidebar.*")
+st.markdown("*Use the sidebar to specify data sources and genetic algorithm (GA) parameter values.*")
+
 
 st.markdown(
     'Click the :blue["Run optimization"] button to see calibration results, simulated hydrographs, predictions, etc.'
@@ -39,22 +40,28 @@ decoder.eval()
 
 
 # Input calibration time series
+
 st.sidebar.markdown(
-    "## Upload a *calibration* climate forcing and discharge time series data [Optional]."
+    "## Select a catchment from the CAMELS dataset or upload a climate forcing and discharge time series."
+)
+
+selected_catchment = st.sidebar.selectbox(
+    "Which CAMELS catchment do you want to model?",
+    catchments["gauge_name"].tolist(),
+    index=0,
+    placeholder="Choose a catchment...",
+)
+
+st.sidebar.markdown(
+    "## Or, upload *calibration* and *test* climate forcing and discharge time series data."
 )
 
 uploaded_file_calibration = st.sidebar.file_uploader(
-    "Select a calibration period comma-separated CSV file with no headers. The four columns are P, T, PET, and Q."
-)
-
-
-# Input test time series
-st.sidebar.markdown(
-    "## Upload a *test* climate forcing and discharge time series data [Optional]."
+    "Select a *calibration* period comma-separated CSV file with no headers. The four columns are P, T, PET, and Q."
 )
 
 uploaded_file_test = st.sidebar.file_uploader(
-    "Select a test period comma-separated CSV file with no headers. The four columns are P, T, PET, and Q."
+    "Select a *test* period comma-separated CSV file with no headers. The four columns are P, T, PET, and Q."
 )
 
 
@@ -63,7 +70,10 @@ if uploaded_file_calibration is not None:
     x_cal = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
     y_cal = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
 else:
-    input_data = np.genfromtxt("./data/app_train.csv", delimiter=",")
+    file_name = catchments[catchments["gauge_name"] == selected_catchment][
+        "data_train"
+    ].to_string(index=False)
+    input_data = np.genfromtxt(file_name, delimiter=",")
     x_cal = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
     y_cal = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
 
@@ -73,7 +83,10 @@ if uploaded_file_test is not None:
     x_test = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
     y_test = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
 else:
-    input_data = np.genfromtxt("./data/app_test.csv", delimiter=",")
+    file_name = catchments[catchments["gauge_name"] == selected_catchment][
+        "data_test"
+    ].to_string(index=False)
+    input_data = np.genfromtxt(file_name, delimiter=",")
     x_test = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
     y_test = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
 
@@ -111,7 +124,7 @@ sol_per_pop = st.sidebar.number_input(
 
 
 # input sol_per_pop
-st.sidebar.markdown("## Select the number of solutions to be selected as parents..")
+st.sidebar.markdown("## Select the number of solutions to be selected as parents.")
 
 num_parents_mating = st.sidebar.number_input(
     "Input the number of solutions to be selected as parents.",
@@ -169,7 +182,6 @@ class Objective_builder:
 
         return chart_data
 
-
 # Hyperparameters of GA
 num_genes = 8
 
@@ -183,10 +195,8 @@ crossover_type = "single_point"
 mutation_type = "random"
 mutation_probability = 0.25
 
-
 fn_cal = Objective_builder(x_cal, y_cal)
 fn_test = Objective_builder(x_test, y_test)
-
 
 # run optimization
 if "clicked" not in st.session_state:
@@ -221,19 +231,26 @@ ga_instance = pygad.GA(
     on_generation=on_generation,
 )
 
-
 def click_button():
     st.session_state.clicked = True
-
+    
 
 st.button(":blue[Run optimization]", on_click=click_button)
 
 if st.session_state.clicked:
+    
     ga_instance.run()
-
+    
     # Gof
     kge_cal = round(ga_instance.best_solution()[1], 3)
     kge_test = round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
+    
+    if uploaded_file_calibration is not None:
+        st.markdown("Calibration results of user supplied catchment data")
+    else:
+        st.markdown(
+            f"Calibration results of the :red[{selected_catchment}, USA]."
+        )
 
     f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**]."
 
@@ -274,7 +291,7 @@ if st.session_state.clicked:
     f":red[**Calibration KGE={kge_cal}**]."
 
     chart_cal
-
+    
     st.session_state.clicked = False
 
 
@@ -285,7 +302,7 @@ st.markdown(
     "The method for developing generative hydrological model is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
 )
 st.caption(
-    "The Fish River data was derived from the [CAMELS dataset](https://ral.ucar.edu/solutions/products/camels), which was further proceeded by [Knoben et al. (2020)](http://dx.doi.org/10.1029/2019WR025975)."
+    "The CAMELS catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w). License of the dataset can be found in the GitHub page of this web appplication."
 )
 
 st.markdown(
