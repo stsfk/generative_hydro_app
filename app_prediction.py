@@ -12,6 +12,9 @@ import numpy as np
 
 import HydroErr
 
+# load catchment list
+catchments = pd.read_csv("./data/Caravan-CAMELS/catchments.csv", dtype=str)
+
 # load model
 embedding = torch.load(
     "data/final_lstm_embedding_test.pt", map_location=torch.device("cpu")
@@ -24,26 +27,34 @@ embedding.eval()
 decoder.eval()
 
 
-# Input time series 
+# Input time series
 st.sidebar.markdown(
-    "## Upload climate forcing and discharge time series data [Optional]."
+    "## Select a catchment from the CAMELS dataset or upload a climate forcing and discharge time series."
+)
+
+selected_catchment = st.sidebar.selectbox(
+   "Which CAMELS catchment do you want to model?",
+   catchments["gauge_name"].tolist(),
+   index=0,
+   placeholder="Choose a catchment...",
 )
 
 uploaded_file = st.sidebar.file_uploader(
-    "Select a comma-separated CSV file with no headers. The four columns are P, T, PET, and Q."
+    "Upload a comma-separated CSV file with no headers. The four columns are P, T, PET, and Q."
 )
 
 if uploaded_file is not None:
     input_data = np.genfromtxt(uploaded_file, delimiter=",")
     x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
 else:
-    input_data = np.genfromtxt("./data/app_train.csv", delimiter=",")
+    file_name = catchments[catchments["gauge_name"]==selected_catchment]["data_all"].to_string(index=False)
+    input_data = np.genfromtxt(file_name, delimiter=",")
     x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
 
 
 # input parameter values
 st.sidebar.markdown(
-    "## Select the eight parameter values below to generate a model instance that can be used for hydrological prediction."
+    "## Select an 8-dimensional numerical vector (i.e., the eight parameter values) below to generate a model instance."
 )
 number1 = st.sidebar.slider(
     "Select parameter 1",
@@ -130,12 +141,20 @@ d = {
 chart_data = pd.DataFrame(data=d)
 
 # Plotting
+st.header("Generating hydrological model instances from numerical vectors.")
 st.subheader("Comparison of simulated and observed hydrographs.")
-st.markdown("*Select paramater values from the sidebar to generate model instances.*")
-st.markdown("*[Optional] Upload climate forcing and discharge time series data. If no data are uploaded, data of Fish River near Fort Kent, Maine, US (USGS gauge ID: 01013500) will be used.*")
 
+st.markdown("*Select paramater values from the sidebar to generate model instances.*")
+st.markdown("*Upload catchment data or selected a CAMELS catchment from the sidebar to run simulations.*")
+
+if uploaded_file is not None:
+     st.markdown("User supplied catchment data")
+else:
+     st.markdown(f':red[{selected_catchment}, USA], extracted from the Caravan dataset.')
+     st.caption("Simulation starts from 1981-01-01, and the warm-up period is not shown.")
 
 st.line_chart(chart_data[0:dispaly_days], color=["#0457ac", "#a7e237"])
+
 
 # Prediction accuracy
 
@@ -174,8 +193,7 @@ st.markdown(
     "The method for developing generative hydrological model is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
 )
 st.caption(
-    "The Fish River data was derived from the [CAMELS dataset](https://ral.ucar.edu/solutions/products/camels), which was further proceeded by [Knoben et al. (2020)](http://dx.doi.org/10.1029/2019WR025975)."
-)
+    "The CAMELS catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w). License of the dataset can be found in the GitHub page of this web appplication.")
 
 st.markdown(
     '<a href="mailto:yyang90@connect.hku.hk">Contact the authors. </a>',

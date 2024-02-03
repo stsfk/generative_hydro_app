@@ -1,0 +1,483 @@
+gauge_id,gauge_name,data_all,data_train,data_test
+01022500,"Narraguagus River at Cherryfield, Maine",./data/Caravan-CAMELS/01022500.csv,./data/Caravan-CAMELS/01022500_train.csv,./data/Caravan-CAMELS/01022500_test.csv
+01031500,"Piscataquis River near Dover-Foxcroft, Maine",./data/Caravan-CAMELS/01031500.csv,./data/Caravan-CAMELS/01031500_train.csv,./data/Caravan-CAMELS/01031500_test.csv
+01047000,"Carrabassett River near North Anson, Maine",./data/Caravan-CAMELS/01047000.csv,./data/Caravan-CAMELS/01047000_train.csv,./data/Caravan-CAMELS/01047000_test.csv
+01052500,"Diamond River near Wentworth Location, NH",./data/Caravan-CAMELS/01052500.csv,./data/Caravan-CAMELS/01052500_train.csv,./data/Caravan-CAMELS/01052500_test.csv
+01054200,"Wild River at Gilead, Maine",./data/Caravan-CAMELS/01054200.csv,./data/Caravan-CAMELS/01054200_train.csv,./data/Caravan-CAMELS/01054200_test.csv
+01055000,"Swift River near Roxbury, Maine",./data/Caravan-CAMELS/01055000.csv,./data/Caravan-CAMELS/01055000_train.csv,./data/Caravan-CAMELS/01055000_test.csv
+01057000,"Little Androscoggin River near South Paris, Maine",./data/Caravan-CAMELS/01057000.csv,./data/Caravan-CAMELS/01057000_train.csv,./data/Caravan-CAMELS/01057000_test.csv
+01078000,"SMITH RIVER NEAR BRISTOL, NH",./data/Caravan-CAMELS/01078000.csv,./data/Caravan-CAMELS/01078000_train.csv,./data/Caravan-CAMELS/01078000_test.csv
+01134500,"MOOSE RIVER AT VICTORY, VT",./data/Caravan-CAMELS/01134500.csv,./data/Caravan-CAMELS/01134500_train.csv,./data/Caravan-CAMELS/01134500_test.csv
+01137500,"AMMONOOSUC RIVER AT BETHLEHEM JUNCTION, NH",./data/Caravan-CAMELS/01137500.csv,./data/Caravan-CAMELS/01137500_train.csv,./data/Caravan-CAMELS/01137500_test.csv
+01139000,"WELLS RIVER AT WELLS RIVER, VT",./data/Caravan-CAMELS/01139000.csv,./data/Caravan-CAMELS/01139000_train.csv,./data/Caravan-CAMELS/01139000_test.csv
+01144000,"WHITE RIVER AT WEST HARTFORD, VT",./data/Caravan-CAMELS/01144000.csv,./data/Caravan-CAMELS/01144000_train.csv,./data/Caravan-CAMELS/01144000_test.csv
+01169000,"NORTH RIVER AT SHATTUCKVILLE, MA",./data/Caravan-CAMELS/01169000.csv,./data/Caravan-CAMELS/01169000_train.csv,./data/Caravan-CAMELS/01169000_test.csv
+01170100,"GREEN RIVER NEAR COLRAIN, MA",./data/Caravan-CAMELS/01170100.csv,./data/Caravan-CAMELS/01170100_train.csv,./data/Caravan-CAMELS/01170100_test.csv
+01181000,"WEST BRANCH WESTFIELD RIVER AT HUNTINGTON, MA",./data/Caravan-CAMELS/01181000.csv,./data/Caravan-CAMELS/01181000_train.csv,./data/Caravan-CAMELS/01181000_test.csv
+01333000,"GREEN RIVER AT WILLIAMSTOWN, MA",./data/Caravan-CAMELS/01333000.csv,./data/Caravan-CAMELS/01333000_train.csv,./data/Caravan-CAMELS/01333000_test.csv
+01350000,SCHOHARIE CREEK AT PRATTSVILLE NY,./data/Caravan-CAMELS/01350000.csv,./data/Caravan-CAMELS/01350000_train.csv,./data/Caravan-CAMELS/01350000_test.csv
+01365000,RONDOUT CREEK NEAR LOWES CORNERS NY,./data/Caravan-CAMELS/01365000.csv,./data/Caravan-CAMELS/01365000_train.csv,./data/Caravan-CAMELS/01365000_test.csv
+01413500,EAST BR DELAWARE R AT MARGARETVILLE NY,./data/Caravan-CAMELS/01413500.csv,./data/Caravan-CAMELS/01413500_train.csv,./data/Caravan-CAMELS/01413500_test.csv
+01423000,WEST BRANCH DELAWARE RIVER AT WALTON NY,./data/Caravan-CAMELS/01423000.csv,./data/Caravan-CAMELS/01423000_train.csv,./data/Caravan-CAMELS/01423000_test.csv
+01435000,NEVERSINK RIVER NEAR CLARYVILLE NY,./data/Caravan-CAMELS/01435000.csv,./data/Caravan-CAMELS/01435000_train.csv,./data/Caravan-CAMELS/01435000_test.csv
+01439500,"Bush Kill at Shoemakers, PA",./data/Caravan-CAMELS/01439500.csv,./data/Caravan-CAMELS/01439500_train.csv,./data/Caravan-CAMELS/01439500_test.csv
+01440000,FLAT BROOK NEAR FLATBROOKVILLE NJ,./data/Caravan-CAMELS/01440000.csv,./data/Caravan-CAMELS/01440000_train.csv,./data/Caravan-CAMELS/01440000_test.csv
+01440400,"Brodhead Creek near Analomink, PA",./data/Caravan-CAMELS/01440400.csv,./data/Caravan-CAMELS/01440400_train.csv,./data/Caravan-CAMELS/01440400_test.csv
+01451800,"Jordan Creek near Schnecksville, PA",./data/Caravan-CAMELS/01451800.csv,./data/Caravan-CAMELS/01451800_train.csv,./data/Caravan-CAMELS/01451800_test.csv
+01485500,"NASSAWANGO CREEK NEAR SNOW HILL, MD",./data/Caravan-CAMELS/01485500.csv,./data/Caravan-CAMELS/01485500_train.csv,./data/Caravan-CAMELS/01485500_test.csv
+01487000,"NANTICOKE RIVER NEAR BRIDGEVILLE, DE",./data/Caravan-CAMELS/01487000.csv,./data/Caravan-CAMELS/01487000_train.csv,./data/Caravan-CAMELS/01487000_test.csv
+01491000,"CHOPTANK RIVER NEAR GREENSBORO, MD",./data/Caravan-CAMELS/01491000.csv,./data/Caravan-CAMELS/01491000_train.csv,./data/Caravan-CAMELS/01491000_test.csv
+01510000,OTSELIC RIVER AT CINCINNATUS NY,./data/Caravan-CAMELS/01510000.csv,./data/Caravan-CAMELS/01510000_train.csv,./data/Caravan-CAMELS/01510000_test.csv
+01518862,"Cowanesque River at Westfield, PA",./data/Caravan-CAMELS/01518862.csv,./data/Caravan-CAMELS/01518862_train.csv,./data/Caravan-CAMELS/01518862_test.csv
+01532000,"Towanda Creek near Monroeton, PA",./data/Caravan-CAMELS/01532000.csv,./data/Caravan-CAMELS/01532000_train.csv,./data/Caravan-CAMELS/01532000_test.csv
+01539000,"Fishing Creek near Bloomsburg, PA",./data/Caravan-CAMELS/01539000.csv,./data/Caravan-CAMELS/01539000_train.csv,./data/Caravan-CAMELS/01539000_test.csv
+01543000,"Driftwood Br Sinnemahoning Cr at Sterling Run, PA",./data/Caravan-CAMELS/01543000.csv,./data/Caravan-CAMELS/01543000_train.csv,./data/Caravan-CAMELS/01543000_test.csv
+01543500,"Sinnemahoning Creek at Sinnemahoning, PA",./data/Caravan-CAMELS/01543500.csv,./data/Caravan-CAMELS/01543500_train.csv,./data/Caravan-CAMELS/01543500_test.csv
+01544500,"Kettle Creek at Cross Fork, PA",./data/Caravan-CAMELS/01544500.csv,./data/Caravan-CAMELS/01544500_train.csv,./data/Caravan-CAMELS/01544500_test.csv
+01545600,"Young Womans Creek near Renovo, PA",./data/Caravan-CAMELS/01545600.csv,./data/Caravan-CAMELS/01545600_train.csv,./data/Caravan-CAMELS/01545600_test.csv
+01547700,"Marsh Creek at Blanchard, PA",./data/Caravan-CAMELS/01547700.csv,./data/Caravan-CAMELS/01547700_train.csv,./data/Caravan-CAMELS/01547700_test.csv
+01548500,"Pine Creek at Cedar Run, PA",./data/Caravan-CAMELS/01548500.csv,./data/Caravan-CAMELS/01548500_train.csv,./data/Caravan-CAMELS/01548500_test.csv
+01550000,"Lycoming Creek near Trout Run, PA",./data/Caravan-CAMELS/01550000.csv,./data/Caravan-CAMELS/01550000_train.csv,./data/Caravan-CAMELS/01550000_test.csv
+01552000,"Loyalsock Creek at Loyalsockville, PA",./data/Caravan-CAMELS/01552000.csv,./data/Caravan-CAMELS/01552000_train.csv,./data/Caravan-CAMELS/01552000_test.csv
+01557500,"Bald Eagle Creek at Tyrone, PA",./data/Caravan-CAMELS/01557500.csv,./data/Caravan-CAMELS/01557500_train.csv,./data/Caravan-CAMELS/01557500_test.csv
+01568000,"Sherman Creek at Shermans Dale, PA",./data/Caravan-CAMELS/01568000.csv,./data/Caravan-CAMELS/01568000_train.csv,./data/Caravan-CAMELS/01568000_test.csv
+01580000,"DEER CREEK AT ROCKS, MD",./data/Caravan-CAMELS/01580000.csv,./data/Caravan-CAMELS/01580000_train.csv,./data/Caravan-CAMELS/01580000_test.csv
+01583500,"WESTERN RUN AT WESTERN RUN, MD",./data/Caravan-CAMELS/01583500.csv,./data/Caravan-CAMELS/01583500_train.csv,./data/Caravan-CAMELS/01583500_test.csv
+01596500,"SAVAGE RIVER NEAR BARTON, MD",./data/Caravan-CAMELS/01596500.csv,./data/Caravan-CAMELS/01596500_train.csv,./data/Caravan-CAMELS/01596500_test.csv
+01605500,"SOUTH BRANCH POTOMAC RIVER AT FRANKLIN, WV",./data/Caravan-CAMELS/01605500.csv,./data/Caravan-CAMELS/01605500_train.csv,./data/Caravan-CAMELS/01605500_test.csv
+01606500,"SO. BRANCH POTOMAC RIVER NR PETERSBURG, WV",./data/Caravan-CAMELS/01606500.csv,./data/Caravan-CAMELS/01606500_train.csv,./data/Caravan-CAMELS/01606500_test.csv
+01632000,"N F SHENANDOAH RIVER AT COOTES STORE, VA",./data/Caravan-CAMELS/01632000.csv,./data/Caravan-CAMELS/01632000_train.csv,./data/Caravan-CAMELS/01632000_test.csv
+01632900,"SMITH CREEK NEAR NEW MARKET, VA",./data/Caravan-CAMELS/01632900.csv,./data/Caravan-CAMELS/01632900_train.csv,./data/Caravan-CAMELS/01632900_test.csv
+01634500,"CEDAR CREEK NEAR WINCHESTER, VA",./data/Caravan-CAMELS/01634500.csv,./data/Caravan-CAMELS/01634500_train.csv,./data/Caravan-CAMELS/01634500_test.csv
+01638480,"CATOCTIN CREEK AT TAYLORSTOWN, VA",./data/Caravan-CAMELS/01638480.csv,./data/Caravan-CAMELS/01638480_train.csv,./data/Caravan-CAMELS/01638480_test.csv
+01639500,"BIG PIPE CREEK AT BRUCEVILLE, MD",./data/Caravan-CAMELS/01639500.csv,./data/Caravan-CAMELS/01639500_train.csv,./data/Caravan-CAMELS/01639500_test.csv
+01644000,"GOOSE CREEK NEAR LEESBURG, VA",./data/Caravan-CAMELS/01644000.csv,./data/Caravan-CAMELS/01644000_train.csv,./data/Caravan-CAMELS/01644000_test.csv
+01664000,"RAPPAHANNOCK RIVER AT REMINGTON, VA",./data/Caravan-CAMELS/01664000.csv,./data/Caravan-CAMELS/01664000_train.csv,./data/Caravan-CAMELS/01664000_test.csv
+01666500,"ROBINSON RIVER NEAR LOCUST DALE, VA",./data/Caravan-CAMELS/01666500.csv,./data/Caravan-CAMELS/01666500_train.csv,./data/Caravan-CAMELS/01666500_test.csv
+01667500,"RAPIDAN RIVER NEAR CULPEPER, VA",./data/Caravan-CAMELS/01667500.csv,./data/Caravan-CAMELS/01667500_train.csv,./data/Caravan-CAMELS/01667500_test.csv
+01669520,"DRAGON SWAMP AT MASCOT, VA",./data/Caravan-CAMELS/01669520.csv,./data/Caravan-CAMELS/01669520_train.csv,./data/Caravan-CAMELS/01669520_test.csv
+02011400,"JACKSON RIVER NEAR BACOVA, VA",./data/Caravan-CAMELS/02011400.csv,./data/Caravan-CAMELS/02011400_train.csv,./data/Caravan-CAMELS/02011400_test.csv
+02011460,"BACK CREEK NEAR SUNRISE, VA",./data/Caravan-CAMELS/02011460.csv,./data/Caravan-CAMELS/02011460_train.csv,./data/Caravan-CAMELS/02011460_test.csv
+02013000,"DUNLAP CREEK NEAR COVINGTON, VA",./data/Caravan-CAMELS/02013000.csv,./data/Caravan-CAMELS/02013000_train.csv,./data/Caravan-CAMELS/02013000_test.csv
+02014000,"POTTS CREEK NEAR COVINGTON, VA",./data/Caravan-CAMELS/02014000.csv,./data/Caravan-CAMELS/02014000_train.csv,./data/Caravan-CAMELS/02014000_test.csv
+02015700,"BULLPASTURE RIVER AT WILLIAMSVILLE, VA",./data/Caravan-CAMELS/02015700.csv,./data/Caravan-CAMELS/02015700_train.csv,./data/Caravan-CAMELS/02015700_test.csv
+02016000,"COWPASTURE RIVER NEAR CLIFTON FORGE, VA",./data/Caravan-CAMELS/02016000.csv,./data/Caravan-CAMELS/02016000_train.csv,./data/Caravan-CAMELS/02016000_test.csv
+02017500,"JOHNS CREEK AT NEW CASTLE, VA",./data/Caravan-CAMELS/02017500.csv,./data/Caravan-CAMELS/02017500_train.csv,./data/Caravan-CAMELS/02017500_test.csv
+02018000,"CRAIG CREEK AT PARR, VA",./data/Caravan-CAMELS/02018000.csv,./data/Caravan-CAMELS/02018000_train.csv,./data/Caravan-CAMELS/02018000_test.csv
+02027000,"TYE RIVER NEAR LOVINGSTON, VA",./data/Caravan-CAMELS/02027000.csv,./data/Caravan-CAMELS/02027000_train.csv,./data/Caravan-CAMELS/02027000_test.csv
+02027500,"PINEY RIVER AT PINEY RIVER, VA",./data/Caravan-CAMELS/02027500.csv,./data/Caravan-CAMELS/02027500_train.csv,./data/Caravan-CAMELS/02027500_test.csv
+02028500,"ROCKFISH RIVER NEAR GREENFIELD, VA",./data/Caravan-CAMELS/02028500.csv,./data/Caravan-CAMELS/02028500_train.csv,./data/Caravan-CAMELS/02028500_test.csv
+02046000,"STONY CREEK NEAR DINWIDDIE, VA",./data/Caravan-CAMELS/02046000.csv,./data/Caravan-CAMELS/02046000_train.csv,./data/Caravan-CAMELS/02046000_test.csv
+02051000,"NORTH MEHERRIN RIVER NEAR LUNENBURG, VA",./data/Caravan-CAMELS/02051000.csv,./data/Caravan-CAMELS/02051000_train.csv,./data/Caravan-CAMELS/02051000_test.csv
+02051500,"MEHERRIN RIVER NEAR LAWRENCEVILLE, VA",./data/Caravan-CAMELS/02051500.csv,./data/Caravan-CAMELS/02051500_train.csv,./data/Caravan-CAMELS/02051500_test.csv
+02053200,"POTECASI CREEK NEAR UNION, NC",./data/Caravan-CAMELS/02053200.csv,./data/Caravan-CAMELS/02053200_train.csv,./data/Caravan-CAMELS/02053200_test.csv
+02053800,"S F ROANOKE RIVER NEAR SHAWSVILLE, VA",./data/Caravan-CAMELS/02053800.csv,./data/Caravan-CAMELS/02053800_train.csv,./data/Caravan-CAMELS/02053800_test.csv
+02056900,"BLACKWATER RIVER NEAR ROCKY MOUNT, VA",./data/Caravan-CAMELS/02056900.csv,./data/Caravan-CAMELS/02056900_train.csv,./data/Caravan-CAMELS/02056900_test.csv
+02059500,"GOOSE CREEK NEAR HUDDLESTON, VA",./data/Caravan-CAMELS/02059500.csv,./data/Caravan-CAMELS/02059500_train.csv,./data/Caravan-CAMELS/02059500_test.csv
+02064000,"FALLING RIVER NEAR NARUNA, VA",./data/Caravan-CAMELS/02064000.csv,./data/Caravan-CAMELS/02064000_train.csv,./data/Caravan-CAMELS/02064000_test.csv
+02065500,"CUB CREEK AT PHENIX, VA",./data/Caravan-CAMELS/02065500.csv,./data/Caravan-CAMELS/02065500_train.csv,./data/Caravan-CAMELS/02065500_test.csv
+02069700,"SOUTH MAYO RIVER NEAR NETTLERIDGE, VA",./data/Caravan-CAMELS/02069700.csv,./data/Caravan-CAMELS/02069700_train.csv,./data/Caravan-CAMELS/02069700_test.csv
+02070000,"NORTH MAYO RIVER NEAR SPENCER, VA",./data/Caravan-CAMELS/02070000.csv,./data/Caravan-CAMELS/02070000_train.csv,./data/Caravan-CAMELS/02070000_test.csv
+02074500,"SANDY RIVER NEAR DANVILLE, VA",./data/Caravan-CAMELS/02074500.csv,./data/Caravan-CAMELS/02074500_train.csv,./data/Caravan-CAMELS/02074500_test.csv
+02077200,"HYCO CREEK NEAR LEASBURG, NC",./data/Caravan-CAMELS/02077200.csv,./data/Caravan-CAMELS/02077200_train.csv,./data/Caravan-CAMELS/02077200_test.csv
+02081500,"TAR RIVER NEAR TAR RIVER, NC",./data/Caravan-CAMELS/02081500.csv,./data/Caravan-CAMELS/02081500_train.csv,./data/Caravan-CAMELS/02081500_test.csv
+02082950,"LITTLE FISHING CREEK NEAR WHITE OAK, NC",./data/Caravan-CAMELS/02082950.csv,./data/Caravan-CAMELS/02082950_train.csv,./data/Caravan-CAMELS/02082950_test.csv
+02092500,"TRENT RIVER NEAR TRENTON, NC",./data/Caravan-CAMELS/02092500.csv,./data/Caravan-CAMELS/02092500_train.csv,./data/Caravan-CAMELS/02092500_test.csv
+02108000,"NORTHEAST CAPE FEAR RIVER NEAR CHINQUAPIN, NC",./data/Caravan-CAMELS/02108000.csv,./data/Caravan-CAMELS/02108000_train.csv,./data/Caravan-CAMELS/02108000_test.csv
+02111180,"ELK CREEK AT ELKVILLE, NC",./data/Caravan-CAMELS/02111180.csv,./data/Caravan-CAMELS/02111180_train.csv,./data/Caravan-CAMELS/02111180_test.csv
+02111500,"REDDIES RIVER AT NORTH WILKESBORO, NC",./data/Caravan-CAMELS/02111500.csv,./data/Caravan-CAMELS/02111500_train.csv,./data/Caravan-CAMELS/02111500_test.csv
+02112120,"ROARING RIVER NEAR ROARING RIVER, NC",./data/Caravan-CAMELS/02112120.csv,./data/Caravan-CAMELS/02112120_train.csv,./data/Caravan-CAMELS/02112120_test.csv
+02112360,"MITCHELL RIVER NEAR STATE ROAD, NC",./data/Caravan-CAMELS/02112360.csv,./data/Caravan-CAMELS/02112360_train.csv,./data/Caravan-CAMELS/02112360_test.csv
+02118500,"HUNTING CREEK NEAR HARMONY, NC",./data/Caravan-CAMELS/02118500.csv,./data/Caravan-CAMELS/02118500_train.csv,./data/Caravan-CAMELS/02118500_test.csv
+02125000,"BIG BEAR CR NR RICHFIELD, NC",./data/Caravan-CAMELS/02125000.csv,./data/Caravan-CAMELS/02125000_train.csv,./data/Caravan-CAMELS/02125000_test.csv
+02128000,"LITTLE RIVER NEAR STAR, NC",./data/Caravan-CAMELS/02128000.csv,./data/Caravan-CAMELS/02128000_train.csv,./data/Caravan-CAMELS/02128000_test.csv
+02137727,"CATAWBA R NR PLEASANT GARDENS, NC",./data/Caravan-CAMELS/02137727.csv,./data/Caravan-CAMELS/02137727_train.csv,./data/Caravan-CAMELS/02137727_test.csv
+02140991,"JOHNS RIVER AT ARNEYS STORE, NC",./data/Caravan-CAMELS/02140991.csv,./data/Caravan-CAMELS/02140991_train.csv,./data/Caravan-CAMELS/02140991_test.csv
+02143000,"HENRY FORK NEAR HENRY RIVER, NC",./data/Caravan-CAMELS/02143000.csv,./data/Caravan-CAMELS/02143000_train.csv,./data/Caravan-CAMELS/02143000_test.csv
+02149000,"COVE CREEK NEAR LAKE LURE, NC",./data/Caravan-CAMELS/02149000.csv,./data/Caravan-CAMELS/02149000_train.csv,./data/Caravan-CAMELS/02149000_test.csv
+02152100,"FIRST BROAD RIVER NEAR CASAR, NC",./data/Caravan-CAMELS/02152100.csv,./data/Caravan-CAMELS/02152100_train.csv,./data/Caravan-CAMELS/02152100_test.csv
+02177000,"CHATTOOGA RIVER NEAR CLAYTON, GA",./data/Caravan-CAMELS/02177000.csv,./data/Caravan-CAMELS/02177000_train.csv,./data/Caravan-CAMELS/02177000_test.csv
+02178400,"TALLULAH RIVER NEAR CLAYTON, GA",./data/Caravan-CAMELS/02178400.csv,./data/Caravan-CAMELS/02178400_train.csv,./data/Caravan-CAMELS/02178400_test.csv
+02196000,"STEVENS CREEK NEAR MODOC, SC",./data/Caravan-CAMELS/02196000.csv,./data/Caravan-CAMELS/02196000_train.csv,./data/Caravan-CAMELS/02196000_test.csv
+02202600,"BLACK CREEK NEAR BLITCHTON, GA",./data/Caravan-CAMELS/02202600.csv,./data/Caravan-CAMELS/02202600_train.csv,./data/Caravan-CAMELS/02202600_test.csv
+02212600,"FALLING CREEK NEAR JULIETTE, GA",./data/Caravan-CAMELS/02212600.csv,./data/Caravan-CAMELS/02212600_train.csv,./data/Caravan-CAMELS/02212600_test.csv
+02215100,"TUCSAWHATCHEE CREEK NEAR HAWKINSVILLE, GA",./data/Caravan-CAMELS/02215100.csv,./data/Caravan-CAMELS/02215100_train.csv,./data/Caravan-CAMELS/02215100_test.csv
+02216180,"TURNPIKE CREEK NEAR MCRAE, GA",./data/Caravan-CAMELS/02216180.csv,./data/Caravan-CAMELS/02216180_train.csv,./data/Caravan-CAMELS/02216180_test.csv
+02221525,"MURDER CREEK BELOW EATONTON, GA",./data/Caravan-CAMELS/02221525.csv,./data/Caravan-CAMELS/02221525_train.csv,./data/Caravan-CAMELS/02221525_test.csv
+02231000,"ST. MARYS RIVER NR MACCLENNY, FLA.",./data/Caravan-CAMELS/02231000.csv,./data/Caravan-CAMELS/02231000_train.csv,./data/Caravan-CAMELS/02231000_test.csv
+02231342,"FT DRUM CREEK AT SUNSHINE ST PKY NEAR FT DRUM, FL",./data/Caravan-CAMELS/02231342.csv,./data/Caravan-CAMELS/02231342_train.csv,./data/Caravan-CAMELS/02231342_test.csv
+02235200,"BLACKWATER CREEK NEAR CASSIA, FL",./data/Caravan-CAMELS/02235200.csv,./data/Caravan-CAMELS/02235200_train.csv,./data/Caravan-CAMELS/02235200_test.csv
+02245500,"SOUTH FORK BLACK CREEK NR PENNEY FARMS, FLA.",./data/Caravan-CAMELS/02245500.csv,./data/Caravan-CAMELS/02245500_train.csv,./data/Caravan-CAMELS/02245500_test.csv
+02246000,"NORTH FORK BLACK CREEK NR MIDDLEBURG, FLA.",./data/Caravan-CAMELS/02246000.csv,./data/Caravan-CAMELS/02246000_train.csv,./data/Caravan-CAMELS/02246000_test.csv
+02296500,CHARLIE CREEK NEAR GARDNER FL,./data/Caravan-CAMELS/02296500.csv,./data/Caravan-CAMELS/02296500_train.csv,./data/Caravan-CAMELS/02296500_test.csv
+02297310,HORSE CREEK NEAR ARCADIA FL,./data/Caravan-CAMELS/02297310.csv,./data/Caravan-CAMELS/02297310_train.csv,./data/Caravan-CAMELS/02297310_test.csv
+02298123,PRAIRIE CREEK NEAR FORT OGDEN FL,./data/Caravan-CAMELS/02298123.csv,./data/Caravan-CAMELS/02298123_train.csv,./data/Caravan-CAMELS/02298123_test.csv
+02298608,MYAKKA RIVER AT MYAKKA CITY FL,./data/Caravan-CAMELS/02298608.csv,./data/Caravan-CAMELS/02298608_train.csv,./data/Caravan-CAMELS/02298608_test.csv
+02299950,MANATEE RIVER NEAR MYAKKA HEAD FL,./data/Caravan-CAMELS/02299950.csv,./data/Caravan-CAMELS/02299950_train.csv,./data/Caravan-CAMELS/02299950_test.csv
+02310947,"WITHLACOOCHEE RIVER NEAR CUMPRESSCO, FLA.",./data/Caravan-CAMELS/02310947.csv,./data/Caravan-CAMELS/02310947_train.csv,./data/Caravan-CAMELS/02310947_test.csv
+02312200,"LITTLE WITHLACOOCHEE RIVER AT RERDELL, FLA.",./data/Caravan-CAMELS/02312200.csv,./data/Caravan-CAMELS/02312200_train.csv,./data/Caravan-CAMELS/02312200_test.csv
+02324400,"FENHOLLOWAY RIVER NEAR FOLEY, FLA.",./data/Caravan-CAMELS/02324400.csv,./data/Caravan-CAMELS/02324400_train.csv,./data/Caravan-CAMELS/02324400_test.csv
+02327100,"SOPCHOPPY RIVER NR SOPCHOPPY, FLA.",./data/Caravan-CAMELS/02327100.csv,./data/Caravan-CAMELS/02327100_train.csv,./data/Caravan-CAMELS/02327100_test.csv
+02342933,SOUTH FORK COWIKEE CREEK NEAR BATESVILLE AL,./data/Caravan-CAMELS/02342933.csv,./data/Caravan-CAMELS/02342933_train.csv,./data/Caravan-CAMELS/02342933_test.csv
+02349900,"TURKEY CREEK AT BYROMVILLE, GA",./data/Caravan-CAMELS/02349900.csv,./data/Caravan-CAMELS/02349900_train.csv,./data/Caravan-CAMELS/02349900_test.csv
+02350900,"KINCHAFOONEE CREEK NEAR DAWSON, GA",./data/Caravan-CAMELS/02350900.csv,./data/Caravan-CAMELS/02350900_train.csv,./data/Caravan-CAMELS/02350900_test.csv
+02361000,"CHOCTAWHATCHEE RIVER NEAR NEWTON, AL.",./data/Caravan-CAMELS/02361000.csv,./data/Caravan-CAMELS/02361000_train.csv,./data/Caravan-CAMELS/02361000_test.csv
+02363000,PEA RIVER NEAR ARITON AL,./data/Caravan-CAMELS/02363000.csv,./data/Caravan-CAMELS/02363000_train.csv,./data/Caravan-CAMELS/02363000_test.csv
+02369800,BLACKWATER RIVER NEAR BRADLEY AL,./data/Caravan-CAMELS/02369800.csv,./data/Caravan-CAMELS/02369800_train.csv,./data/Caravan-CAMELS/02369800_test.csv
+02371500,CONECUH RIVER AT BRANTLEY AL,./data/Caravan-CAMELS/02371500.csv,./data/Caravan-CAMELS/02371500_train.csv,./data/Caravan-CAMELS/02371500_test.csv
+02372250,PATSALIGA CREEK NEAR BRANTLEY AL,./data/Caravan-CAMELS/02372250.csv,./data/Caravan-CAMELS/02372250_train.csv,./data/Caravan-CAMELS/02372250_test.csv
+02374500,MURDER CREEK NEAR EVERGREEN AL,./data/Caravan-CAMELS/02374500.csv,./data/Caravan-CAMELS/02374500_train.csv,./data/Caravan-CAMELS/02374500_test.csv
+02408540,HATCHET CREEK BELOW ROCKFORD AL,./data/Caravan-CAMELS/02408540.csv,./data/Caravan-CAMELS/02408540_train.csv,./data/Caravan-CAMELS/02408540_test.csv
+02415000,HILLABEE CREEK NEAR HACKNEYVILLE AL,./data/Caravan-CAMELS/02415000.csv,./data/Caravan-CAMELS/02415000_train.csv,./data/Caravan-CAMELS/02415000_test.csv
+02422500,MULBERRY CREEK AT JONES AL,./data/Caravan-CAMELS/02422500.csv,./data/Caravan-CAMELS/02422500_train.csv,./data/Caravan-CAMELS/02422500_test.csv
+02427250,"PINE BARREN CREEK NEAR SNOW HILL, AL.",./data/Caravan-CAMELS/02427250.csv,./data/Caravan-CAMELS/02427250_train.csv,./data/Caravan-CAMELS/02427250_test.csv
+02450250,SIPSEY FORK NEAR GRAYSON AL,./data/Caravan-CAMELS/02450250.csv,./data/Caravan-CAMELS/02450250_train.csv,./data/Caravan-CAMELS/02450250_test.csv
+02464000,NORTH RIVER NEAR SAMANTHA AL,./data/Caravan-CAMELS/02464000.csv,./data/Caravan-CAMELS/02464000_train.csv,./data/Caravan-CAMELS/02464000_test.csv
+02464360,BINION CREEK BELOW GIN CREEK NEAR SAMANTHA AL,./data/Caravan-CAMELS/02464360.csv,./data/Caravan-CAMELS/02464360_train.csv,./data/Caravan-CAMELS/02464360_test.csv
+02469800,SATILPA CREEK NEAR COFFEEVILLE AL,./data/Caravan-CAMELS/02469800.csv,./data/Caravan-CAMELS/02469800_train.csv,./data/Caravan-CAMELS/02469800_test.csv
+02472000,"LEAF RIVER NR COLLINS, MS",./data/Caravan-CAMELS/02472000.csv,./data/Caravan-CAMELS/02472000_train.csv,./data/Caravan-CAMELS/02472000_test.csv
+02472500,"BOUIE CREEK NR HATTIESBURG, MS",./data/Caravan-CAMELS/02472500.csv,./data/Caravan-CAMELS/02472500_train.csv,./data/Caravan-CAMELS/02472500_test.csv
+02479155,"CYPRESS CREEK NR JANICE, MS",./data/Caravan-CAMELS/02479155.csv,./data/Caravan-CAMELS/02479155_train.csv,./data/Caravan-CAMELS/02479155_test.csv
+02479300,"RED CREEK AT VESTRY, MS",./data/Caravan-CAMELS/02479300.csv,./data/Caravan-CAMELS/02479300_train.csv,./data/Caravan-CAMELS/02479300_test.csv
+02479560,ESCATAWPA RIVER NEAR AGRICOLA MS,./data/Caravan-CAMELS/02479560.csv,./data/Caravan-CAMELS/02479560_train.csv,./data/Caravan-CAMELS/02479560_test.csv
+02481000,"BILOXI RIVER AT WORTHAM, MS",./data/Caravan-CAMELS/02481000.csv,./data/Caravan-CAMELS/02481000_train.csv,./data/Caravan-CAMELS/02481000_test.csv
+02481510,"WOLF RIVER NR LANDON, MS",./data/Caravan-CAMELS/02481510.csv,./data/Caravan-CAMELS/02481510_train.csv,./data/Caravan-CAMELS/02481510_test.csv
+03010655,"Oswayo Creek at Shinglehouse, PA",./data/Caravan-CAMELS/03010655.csv,./data/Caravan-CAMELS/03010655_train.csv,./data/Caravan-CAMELS/03010655_test.csv
+03011800,"Kinzua Creek near Guffey, PA",./data/Caravan-CAMELS/03011800.csv,./data/Caravan-CAMELS/03011800_train.csv,./data/Caravan-CAMELS/03011800_test.csv
+03015500,"Brokenstraw Creek at Youngsville, PA",./data/Caravan-CAMELS/03015500.csv,./data/Caravan-CAMELS/03015500_train.csv,./data/Caravan-CAMELS/03015500_test.csv
+03021350,"French Creek near Wattsburg, PA",./data/Caravan-CAMELS/03021350.csv,./data/Caravan-CAMELS/03021350_train.csv,./data/Caravan-CAMELS/03021350_test.csv
+03028000,"West Branch Clarion River at Wilcox, PA",./data/Caravan-CAMELS/03028000.csv,./data/Caravan-CAMELS/03028000_train.csv,./data/Caravan-CAMELS/03028000_test.csv
+03049000,"Buffalo Creek near Freeport, PA",./data/Caravan-CAMELS/03049000.csv,./data/Caravan-CAMELS/03049000_train.csv,./data/Caravan-CAMELS/03049000_test.csv
+03050000,"TYGART VALLEY RIVER NEAR DAILEY, WV",./data/Caravan-CAMELS/03050000.csv,./data/Caravan-CAMELS/03050000_train.csv,./data/Caravan-CAMELS/03050000_test.csv
+03066000,"BLACKWATER R AT DAVIS, WV",./data/Caravan-CAMELS/03066000.csv,./data/Caravan-CAMELS/03066000_train.csv,./data/Caravan-CAMELS/03066000_test.csv
+03069500,"CHEAT RIVER NEAR PARSONS, WV",./data/Caravan-CAMELS/03069500.csv,./data/Caravan-CAMELS/03069500_train.csv,./data/Caravan-CAMELS/03069500_test.csv
+03070500,"BIG SANDY CREEK AT ROCKVILLE, WV",./data/Caravan-CAMELS/03070500.csv,./data/Caravan-CAMELS/03070500_train.csv,./data/Caravan-CAMELS/03070500_test.csv
+03076600,"BEAR CREEK AT FRIENDSVILLE, MD",./data/Caravan-CAMELS/03076600.csv,./data/Caravan-CAMELS/03076600_train.csv,./data/Caravan-CAMELS/03076600_test.csv
+03078000,"CASSELMAN RIVER AT GRANTSVILLE, MD",./data/Caravan-CAMELS/03078000.csv,./data/Caravan-CAMELS/03078000_train.csv,./data/Caravan-CAMELS/03078000_test.csv
+03144000,Wakatomika Creek near Frazeysburg OH,./data/Caravan-CAMELS/03144000.csv,./data/Caravan-CAMELS/03144000_train.csv,./data/Caravan-CAMELS/03144000_test.csv
+03159540,Shade River near Chester OH,./data/Caravan-CAMELS/03159540.csv,./data/Caravan-CAMELS/03159540_train.csv,./data/Caravan-CAMELS/03159540_test.csv
+03161000,"SOUTH FORK NEW RIVER NEAR JEFFERSON, NC",./data/Caravan-CAMELS/03161000.csv,./data/Caravan-CAMELS/03161000_train.csv,./data/Caravan-CAMELS/03161000_test.csv
+03165000,"CHESTNUT CREEK AT GALAX, VA",./data/Caravan-CAMELS/03165000.csv,./data/Caravan-CAMELS/03165000_train.csv,./data/Caravan-CAMELS/03165000_test.csv
+03170000,"LITTLE RIVER AT GRAYSONTOWN, VA",./data/Caravan-CAMELS/03170000.csv,./data/Caravan-CAMELS/03170000_train.csv,./data/Caravan-CAMELS/03170000_test.csv
+03173000,"WALKER CREEK AT BANE, VA",./data/Caravan-CAMELS/03173000.csv,./data/Caravan-CAMELS/03173000_train.csv,./data/Caravan-CAMELS/03173000_test.csv
+03180500,"GREENBRIER RIVER AT DURBIN, WV",./data/Caravan-CAMELS/03180500.csv,./data/Caravan-CAMELS/03180500_train.csv,./data/Caravan-CAMELS/03180500_test.csv
+03182500,"GREENBRIER RIVER AT BUCKEYE, WV",./data/Caravan-CAMELS/03182500.csv,./data/Caravan-CAMELS/03182500_train.csv,./data/Caravan-CAMELS/03182500_test.csv
+03186500,"WILLIAMS RIVER AT DYER, WV",./data/Caravan-CAMELS/03186500.csv,./data/Caravan-CAMELS/03186500_train.csv,./data/Caravan-CAMELS/03186500_test.csv
+03187500,"CRANBERRY RIVER NEAR RICHWOOD, WV",./data/Caravan-CAMELS/03187500.csv,./data/Caravan-CAMELS/03187500_train.csv,./data/Caravan-CAMELS/03187500_test.csv
+03237500,Ohio Brush Creek near West Union OH,./data/Caravan-CAMELS/03237500.csv,./data/Caravan-CAMELS/03237500_train.csv,./data/Caravan-CAMELS/03237500_test.csv
+03238500,White Oak Creek near Georgetown OH,./data/Caravan-CAMELS/03238500.csv,./data/Caravan-CAMELS/03238500_train.csv,./data/Caravan-CAMELS/03238500_test.csv
+03241500,Massies Creek at Wilberforce OH,./data/Caravan-CAMELS/03241500.csv,./data/Caravan-CAMELS/03241500_train.csv,./data/Caravan-CAMELS/03241500_test.csv
+03280700,"CUTSHIN CREEK AT WOOTON, KY",./data/Caravan-CAMELS/03280700.csv,./data/Caravan-CAMELS/03280700_train.csv,./data/Caravan-CAMELS/03280700_test.csv
+03281100,"GOOSE CREEK AT MANCHESTER, KY",./data/Caravan-CAMELS/03281100.csv,./data/Caravan-CAMELS/03281100_train.csv,./data/Caravan-CAMELS/03281100_test.csv
+03281500,"SOUTH FORK KENTUCKY RIVER AT BOONEVILLE, KY",./data/Caravan-CAMELS/03281500.csv,./data/Caravan-CAMELS/03281500_train.csv,./data/Caravan-CAMELS/03281500_test.csv
+03285000,"DIX RIVER NEAR DANVILLE, KY",./data/Caravan-CAMELS/03285000.csv,./data/Caravan-CAMELS/03285000_train.csv,./data/Caravan-CAMELS/03285000_test.csv
+03300400,"BEECH FORK AT MAUD, KY",./data/Caravan-CAMELS/03300400.csv,./data/Caravan-CAMELS/03300400_train.csv,./data/Caravan-CAMELS/03300400_test.csv
+03338780,"NORTH FORK VERMILION RIVER NEAR BISMARCK, IL",./data/Caravan-CAMELS/03338780.csv,./data/Caravan-CAMELS/03338780_train.csv,./data/Caravan-CAMELS/03338780_test.csv
+03340800,BIG RACCOON CREEK NEAR FINCASTLE IND,./data/Caravan-CAMELS/03340800.csv,./data/Caravan-CAMELS/03340800_train.csv,./data/Caravan-CAMELS/03340800_test.csv
+03346000,"NORTH FORK EMBARRAS RIVER NEAR OBLONG, IL",./data/Caravan-CAMELS/03346000.csv,./data/Caravan-CAMELS/03346000_train.csv,./data/Caravan-CAMELS/03346000_test.csv
+03364500,"CLIFTY CREEK AT HARTSVILLE, IN",./data/Caravan-CAMELS/03364500.csv,./data/Caravan-CAMELS/03364500_train.csv,./data/Caravan-CAMELS/03364500_test.csv
+03366500,"MUSCATATUCK RIVER NEAR DEPUTY, IN",./data/Caravan-CAMELS/03366500.csv,./data/Caravan-CAMELS/03366500_train.csv,./data/Caravan-CAMELS/03366500_test.csv
+03384450,"LUSK CREEK NEAR EDDYVILLE, IL",./data/Caravan-CAMELS/03384450.csv,./data/Caravan-CAMELS/03384450_train.csv,./data/Caravan-CAMELS/03384450_test.csv
+03439000,"FRENCH BROAD RIVER AT ROSMAN, NC",./data/Caravan-CAMELS/03439000.csv,./data/Caravan-CAMELS/03439000_train.csv,./data/Caravan-CAMELS/03439000_test.csv
+03456500,"EAST FORK PIGEON RIVER NEAR CANTON, NC",./data/Caravan-CAMELS/03456500.csv,./data/Caravan-CAMELS/03456500_train.csv,./data/Caravan-CAMELS/03456500_test.csv
+03460000,"CATALOOCHEE CREEK NEAR CATALOOCHEE, NC",./data/Caravan-CAMELS/03460000.csv,./data/Caravan-CAMELS/03460000_train.csv,./data/Caravan-CAMELS/03460000_test.csv
+03463300,"SOUTH TOE RIVER NEAR CELO, NC",./data/Caravan-CAMELS/03463300.csv,./data/Caravan-CAMELS/03463300_train.csv,./data/Caravan-CAMELS/03463300_test.csv
+03471500,"S F HOLSTON RIVER AT RIVERSIDE NR CHILHOWIE, VA",./data/Caravan-CAMELS/03471500.csv,./data/Caravan-CAMELS/03471500_train.csv,./data/Caravan-CAMELS/03471500_test.csv
+03473000,"S F HOLSTON RIVER NEAR DAMASCUS, VA",./data/Caravan-CAMELS/03473000.csv,./data/Caravan-CAMELS/03473000_train.csv,./data/Caravan-CAMELS/03473000_test.csv
+03479000,"WATAUGA RIVER NEAR SUGAR GROVE, NC",./data/Caravan-CAMELS/03479000.csv,./data/Caravan-CAMELS/03479000_train.csv,./data/Caravan-CAMELS/03479000_test.csv
+03488000,"N F HOLSTON RIVER NEAR SALTVILLE, VA",./data/Caravan-CAMELS/03488000.csv,./data/Caravan-CAMELS/03488000_train.csv,./data/Caravan-CAMELS/03488000_test.csv
+03498500,"LITTLE RIVER NEAR MARYVILLE, TN",./data/Caravan-CAMELS/03498500.csv,./data/Caravan-CAMELS/03498500_train.csv,./data/Caravan-CAMELS/03498500_test.csv
+03500000,"LITTLE TENNESSEE RIVER NEAR PRENTISS, NC",./data/Caravan-CAMELS/03500000.csv,./data/Caravan-CAMELS/03500000_train.csv,./data/Caravan-CAMELS/03500000_test.csv
+03500240,"CARTOOGECHAYE CREEK NEAR FRANKLIN, NC",./data/Caravan-CAMELS/03500240.csv,./data/Caravan-CAMELS/03500240_train.csv,./data/Caravan-CAMELS/03500240_test.csv
+03504000,"NANTAHALA RIVER NEAR RAINBOW SPRINGS, NC",./data/Caravan-CAMELS/03504000.csv,./data/Caravan-CAMELS/03504000_train.csv,./data/Caravan-CAMELS/03504000_test.csv
+03574500,PAINT ROCK RIVER NEAR WOODVILLE AL,./data/Caravan-CAMELS/03574500.csv,./data/Caravan-CAMELS/03574500_train.csv,./data/Caravan-CAMELS/03574500_test.csv
+03604000,"BUFFALO RIVER NEAR FLAT WOODS, TN",./data/Caravan-CAMELS/03604000.csv,./data/Caravan-CAMELS/03604000_train.csv,./data/Caravan-CAMELS/03604000_test.csv
+04015330,"KNIFE RIVER NEAR TWO HARBORS, MN",./data/Caravan-CAMELS/04015330.csv,./data/Caravan-CAMELS/04015330_train.csv,./data/Caravan-CAMELS/04015330_test.csv
+04024430,"NEMADJI RIVER NEAR SOUTH SUPERIOR, WI",./data/Caravan-CAMELS/04024430.csv,./data/Caravan-CAMELS/04024430_train.csv,./data/Caravan-CAMELS/04024430_test.csv
+04027000,"BAD RIVER NEAR ODANAH, WI",./data/Caravan-CAMELS/04027000.csv,./data/Caravan-CAMELS/04027000_train.csv,./data/Caravan-CAMELS/04027000_test.csv
+04040500,"STURGEON RIVER NEAR SIDNAW, MI",./data/Caravan-CAMELS/04040500.csv,./data/Caravan-CAMELS/04040500_train.csv,./data/Caravan-CAMELS/04040500_test.csv
+04045500,"TAHQUAMENON RIVER NEAR PARADISE, MI",./data/Caravan-CAMELS/04045500.csv,./data/Caravan-CAMELS/04045500_train.csv,./data/Caravan-CAMELS/04045500_test.csv
+04057510,"STURGEON RIVER NEAR NAHMA JUNCTION, MI",./data/Caravan-CAMELS/04057510.csv,./data/Caravan-CAMELS/04057510_train.csv,./data/Caravan-CAMELS/04057510_test.csv
+04057800,"MIDDLE BRANCH ESCANABA RIVER AT HUMBOLDT, MI",./data/Caravan-CAMELS/04057800.csv,./data/Caravan-CAMELS/04057800_train.csv,./data/Caravan-CAMELS/04057800_test.csv
+04059500,"FORD RIVER NEAR HYDE, MI",./data/Caravan-CAMELS/04059500.csv,./data/Caravan-CAMELS/04059500_train.csv,./data/Caravan-CAMELS/04059500_test.csv
+04063700,"POPPLE RIVER NEAR FENCE, WI",./data/Caravan-CAMELS/04063700.csv,./data/Caravan-CAMELS/04063700_train.csv,./data/Caravan-CAMELS/04063700_test.csv
+04074950,"WOLF RIVER AT LANGLADE, WI",./data/Caravan-CAMELS/04074950.csv,./data/Caravan-CAMELS/04074950_train.csv,./data/Caravan-CAMELS/04074950_test.csv
+04105700,"AUGUSTA CREEK NEAR AUGUSTA, MI",./data/Caravan-CAMELS/04105700.csv,./data/Caravan-CAMELS/04105700_train.csv,./data/Caravan-CAMELS/04105700_test.csv
+04122200,"WHITE RIVER NEAR WHITEHALL, MI",./data/Caravan-CAMELS/04122200.csv,./data/Caravan-CAMELS/04122200_train.csv,./data/Caravan-CAMELS/04122200_test.csv
+04122500,"PERE MARQUETTE RIVER AT SCOTTVILLE, MI",./data/Caravan-CAMELS/04122500.csv,./data/Caravan-CAMELS/04122500_train.csv,./data/Caravan-CAMELS/04122500_test.csv
+04127918,"PINE RIVER NEAR RUDYARD, MI",./data/Caravan-CAMELS/04127918.csv,./data/Caravan-CAMELS/04127918_train.csv,./data/Caravan-CAMELS/04127918_test.csv
+04127997,"STURGEON RIVER AT WOLVERINE, MI",./data/Caravan-CAMELS/04127997.csv,./data/Caravan-CAMELS/04127997_train.csv,./data/Caravan-CAMELS/04127997_test.csv
+04185000,Tiffin River at Stryker OH,./data/Caravan-CAMELS/04185000.csv,./data/Caravan-CAMELS/04185000_train.csv,./data/Caravan-CAMELS/04185000_test.csv
+04196800,Tymochtee Creek at Crawford OH,./data/Caravan-CAMELS/04196800.csv,./data/Caravan-CAMELS/04196800_train.csv,./data/Caravan-CAMELS/04196800_test.csv
+04197100,Honey Creek at Melmore OH,./data/Caravan-CAMELS/04197100.csv,./data/Caravan-CAMELS/04197100_train.csv,./data/Caravan-CAMELS/04197100_test.csv
+04213000,Conneaut Creek at Conneaut OH,./data/Caravan-CAMELS/04213000.csv,./data/Caravan-CAMELS/04213000_train.csv,./data/Caravan-CAMELS/04213000_test.csv
+04216418,TONAWANDA CREEK AT ATTICA NY,./data/Caravan-CAMELS/04216418.csv,./data/Caravan-CAMELS/04216418_train.csv,./data/Caravan-CAMELS/04216418_test.csv
+04221000,GENESEE RIVER AT WELLSVILLE NY,./data/Caravan-CAMELS/04221000.csv,./data/Caravan-CAMELS/04221000_train.csv,./data/Caravan-CAMELS/04221000_test.csv
+04224775,CANASERAGA CREEK ABOVE DANSVILLE NY,./data/Caravan-CAMELS/04224775.csv,./data/Caravan-CAMELS/04224775_train.csv,./data/Caravan-CAMELS/04224775_test.csv
+04256000,INDEPENDENCE RIVER AT DONNATTSBURG NY,./data/Caravan-CAMELS/04256000.csv,./data/Caravan-CAMELS/04256000_train.csv,./data/Caravan-CAMELS/04256000_test.csv
+04296000,"BLACK RIVER AT COVENTRY, VT",./data/Caravan-CAMELS/04296000.csv,./data/Caravan-CAMELS/04296000_train.csv,./data/Caravan-CAMELS/04296000_test.csv
+05057200,"BALDHILL CREEK NR DAZEY, ND",./data/Caravan-CAMELS/05057200.csv,./data/Caravan-CAMELS/05057200_train.csv,./data/Caravan-CAMELS/05057200_test.csv
+05087500,"MIDDLE RIVER AT ARGYLE, MN",./data/Caravan-CAMELS/05087500.csv,./data/Caravan-CAMELS/05087500_train.csv,./data/Caravan-CAMELS/05087500_test.csv
+05120500,"WINTERING RIVER NR KARLSRUHE, ND",./data/Caravan-CAMELS/05120500.csv,./data/Caravan-CAMELS/05120500_train.csv,./data/Caravan-CAMELS/05120500_test.csv
+05291000,"WHETSTONE RIVER NEAR BIG STONE CITY, SD",./data/Caravan-CAMELS/05291000.csv,./data/Caravan-CAMELS/05291000_train.csv,./data/Caravan-CAMELS/05291000_test.csv
+05362000,"JUMP RIVER AT SHELDON, WI",./data/Caravan-CAMELS/05362000.csv,./data/Caravan-CAMELS/05362000_train.csv,./data/Caravan-CAMELS/05362000_test.csv
+05393500,"SPIRIT RIVER AT SPIRIT FALLS, WI",./data/Caravan-CAMELS/05393500.csv,./data/Caravan-CAMELS/05393500_train.csv,./data/Caravan-CAMELS/05393500_test.csv
+05399500,"BIG EAU PLEINE RIVER AT STRATFORD, WI",./data/Caravan-CAMELS/05399500.csv,./data/Caravan-CAMELS/05399500_train.csv,./data/Caravan-CAMELS/05399500_test.csv
+05408000,"KICKAPOO RIVER AT LA FARGE, WI",./data/Caravan-CAMELS/05408000.csv,./data/Caravan-CAMELS/05408000_train.csv,./data/Caravan-CAMELS/05408000_test.csv
+05413500,"GRANT RIVER AT BURTON, WI",./data/Caravan-CAMELS/05413500.csv,./data/Caravan-CAMELS/05413500_train.csv,./data/Caravan-CAMELS/05413500_test.csv
+05414000,"PLATTE RIVER NEAR ROCKVILLE, WI",./data/Caravan-CAMELS/05414000.csv,./data/Caravan-CAMELS/05414000_train.csv,./data/Caravan-CAMELS/05414000_test.csv
+05444000,"ELKHORN CREEK NEAR PENROSE, IL",./data/Caravan-CAMELS/05444000.csv,./data/Caravan-CAMELS/05444000_train.csv,./data/Caravan-CAMELS/05444000_test.csv
+05458000,"Little Cedar River near Ionia, IA",./data/Caravan-CAMELS/05458000.csv,./data/Caravan-CAMELS/05458000_train.csv,./data/Caravan-CAMELS/05458000_test.csv
+05466500,"EDWARDS RIVER NEAR NEW BOSTON, IL",./data/Caravan-CAMELS/05466500.csv,./data/Caravan-CAMELS/05466500_train.csv,./data/Caravan-CAMELS/05466500_test.csv
+05487980,"White Breast Creek near Dallas, IA",./data/Caravan-CAMELS/05487980.csv,./data/Caravan-CAMELS/05487980_train.csv,./data/Caravan-CAMELS/05487980_test.csv
+05488200,"English Creek near Knoxville, IA",./data/Caravan-CAMELS/05488200.csv,./data/Caravan-CAMELS/05488200_train.csv,./data/Caravan-CAMELS/05488200_test.csv
+05489000,"Cedar Creek near Bussey, IA",./data/Caravan-CAMELS/05489000.csv,./data/Caravan-CAMELS/05489000_train.csv,./data/Caravan-CAMELS/05489000_test.csv
+05495000,"Fox River at Wayland, MO",./data/Caravan-CAMELS/05495000.csv,./data/Caravan-CAMELS/05495000_train.csv,./data/Caravan-CAMELS/05495000_test.csv
+05495500,"BEAR CREEK NEAR MARCELLINE, IL",./data/Caravan-CAMELS/05495500.csv,./data/Caravan-CAMELS/05495500_train.csv,./data/Caravan-CAMELS/05495500_test.csv
+05501000,"North River at Palmyra, MO",./data/Caravan-CAMELS/05501000.csv,./data/Caravan-CAMELS/05501000_train.csv,./data/Caravan-CAMELS/05501000_test.csv
+05503800,"Crooked Creek near Paris, MO",./data/Caravan-CAMELS/05503800.csv,./data/Caravan-CAMELS/05503800_train.csv,./data/Caravan-CAMELS/05503800_test.csv
+05507600,"Lick Creek at Perry, MO",./data/Caravan-CAMELS/05507600.csv,./data/Caravan-CAMELS/05507600_train.csv,./data/Caravan-CAMELS/05507600_test.csv
+05508805,"Spencer Cr. bl Plum Cr. nr Frankford, MO",./data/Caravan-CAMELS/05508805.csv,./data/Caravan-CAMELS/05508805_train.csv,./data/Caravan-CAMELS/05508805_test.csv
+05525500,"SUGAR CREEK AT MILFORD, IL",./data/Caravan-CAMELS/05525500.csv,./data/Caravan-CAMELS/05525500_train.csv,./data/Caravan-CAMELS/05525500_test.csv
+05556500,"BIG BUREAU CREEK AT PRINCETON, IL",./data/Caravan-CAMELS/05556500.csv,./data/Caravan-CAMELS/05556500_train.csv,./data/Caravan-CAMELS/05556500_test.csv
+05584500,"LA MOINE RIVER AT COLMAR, IL",./data/Caravan-CAMELS/05584500.csv,./data/Caravan-CAMELS/05584500_train.csv,./data/Caravan-CAMELS/05584500_test.csv
+05592050,"ROBINSON CREEK NEAR SHELBYVILLE, IL",./data/Caravan-CAMELS/05592050.csv,./data/Caravan-CAMELS/05592050_train.csv,./data/Caravan-CAMELS/05592050_test.csv
+05592575,"HICKORY CREEK NEAR BROWNSTOWN, IL",./data/Caravan-CAMELS/05592575.csv,./data/Caravan-CAMELS/05592575_train.csv,./data/Caravan-CAMELS/05592575_test.csv
+05593575,"LITTLE CROOKED CREEK NEAR NEW MINDEN, IL",./data/Caravan-CAMELS/05593575.csv,./data/Caravan-CAMELS/05593575_train.csv,./data/Caravan-CAMELS/05593575_test.csv
+05593900,"EAST FORK SHOAL CREEK NEAR COFFEEN, IL",./data/Caravan-CAMELS/05593900.csv,./data/Caravan-CAMELS/05593900_train.csv,./data/Caravan-CAMELS/05593900_test.csv
+05595730,"RAYSE CREEK NEAR WALTONVILLE, IL",./data/Caravan-CAMELS/05595730.csv,./data/Caravan-CAMELS/05595730_train.csv,./data/Caravan-CAMELS/05595730_test.csv
+06037500,Madison River near West Yellowstone MT,./data/Caravan-CAMELS/06037500.csv,./data/Caravan-CAMELS/06037500_train.csv,./data/Caravan-CAMELS/06037500_test.csv
+06188000,"LAMAR RIVER NR TOWER FALLS RANGER STATION, YNP",./data/Caravan-CAMELS/06188000.csv,./data/Caravan-CAMELS/06188000_train.csv,./data/Caravan-CAMELS/06188000_test.csv
+06221400,"DINWOODY CREEK ABOVE LAKES, NEAR BURRIS, WYO.",./data/Caravan-CAMELS/06221400.csv,./data/Caravan-CAMELS/06221400_train.csv,./data/Caravan-CAMELS/06221400_test.csv
+06224000,"BULL LAKE CREEK ABOVE BULL LAKE, WY",./data/Caravan-CAMELS/06224000.csv,./data/Caravan-CAMELS/06224000_train.csv,./data/Caravan-CAMELS/06224000_test.csv
+06280300,"SOUTH FORK SHOSHONE RIVER NEAR VALLEY, WY",./data/Caravan-CAMELS/06280300.csv,./data/Caravan-CAMELS/06280300_train.csv,./data/Caravan-CAMELS/06280300_test.csv
+06289000,Little Bighorn River at State Line nr Wyola MT,./data/Caravan-CAMELS/06289000.csv,./data/Caravan-CAMELS/06289000_train.csv,./data/Caravan-CAMELS/06289000_test.csv
+06291500,Lodge Grass Cr ab Willow C Div nr Wyola MT,./data/Caravan-CAMELS/06291500.csv,./data/Caravan-CAMELS/06291500_train.csv,./data/Caravan-CAMELS/06291500_test.csv
+06332515,"BEAR DEN CREEK NR MANDAREE, ND",./data/Caravan-CAMELS/06332515.csv,./data/Caravan-CAMELS/06332515_train.csv,./data/Caravan-CAMELS/06332515_test.csv
+06339100,"KNIFE RIVER AT MANNING, ND",./data/Caravan-CAMELS/06339100.csv,./data/Caravan-CAMELS/06339100_train.csv,./data/Caravan-CAMELS/06339100_test.csv
+06344600,"GREEN RIVER NR NEW HRADEC, ND",./data/Caravan-CAMELS/06344600.csv,./data/Caravan-CAMELS/06344600_train.csv,./data/Caravan-CAMELS/06344600_test.csv
+06350000,"CANNONBALL RIVER AT REGENT, ND",./data/Caravan-CAMELS/06350000.csv,./data/Caravan-CAMELS/06350000_train.csv,./data/Caravan-CAMELS/06350000_test.csv
+06352000,"CEDAR CREEK NR HAYNES, ND",./data/Caravan-CAMELS/06352000.csv,./data/Caravan-CAMELS/06352000_train.csv,./data/Caravan-CAMELS/06352000_test.csv
+06404000,BATTLE CR NEAR KEYSTONE SD,./data/Caravan-CAMELS/06404000.csv,./data/Caravan-CAMELS/06404000_train.csv,./data/Caravan-CAMELS/06404000_test.csv
+06406000,BATTLE CR AT HERMOSA SD,./data/Caravan-CAMELS/06406000.csv,./data/Caravan-CAMELS/06406000_train.csv,./data/Caravan-CAMELS/06406000_test.csv
+06409000,CASTLE CR ABOVE DEERFIELD RES NEAR HILL CITY SD,./data/Caravan-CAMELS/06409000.csv,./data/Caravan-CAMELS/06409000_train.csv,./data/Caravan-CAMELS/06409000_test.csv
+06431500,SPEARFISH CR AT SPEARFISH SD,./data/Caravan-CAMELS/06431500.csv,./data/Caravan-CAMELS/06431500_train.csv,./data/Caravan-CAMELS/06431500_test.csv
+06440200,"SOUTH FORK BAD R NEAR COTTONWOOD,SD",./data/Caravan-CAMELS/06440200.csv,./data/Caravan-CAMELS/06440200_train.csv,./data/Caravan-CAMELS/06440200_test.csv
+06447500,LITTLE WHITE R NEAR MARTIN SD,./data/Caravan-CAMELS/06447500.csv,./data/Caravan-CAMELS/06447500_train.csv,./data/Caravan-CAMELS/06447500_test.csv
+06470800,"BEAR CREEK NR OAKES, ND",./data/Caravan-CAMELS/06470800.csv,./data/Caravan-CAMELS/06470800_train.csv,./data/Caravan-CAMELS/06470800_test.csv
+06477500,FIRESTEEL CR NEAR MOUNT VERNON SD,./data/Caravan-CAMELS/06477500.csv,./data/Caravan-CAMELS/06477500_train.csv,./data/Caravan-CAMELS/06477500_test.csv
+06479215,BIG SIOUX RIVER NR FLORENCE SD,./data/Caravan-CAMELS/06479215.csv,./data/Caravan-CAMELS/06479215_train.csv,./data/Caravan-CAMELS/06479215_test.csv
+06479438,BIG SIOUX R NEAR WATERTOWN SD,./data/Caravan-CAMELS/06479438.csv,./data/Caravan-CAMELS/06479438_train.csv,./data/Caravan-CAMELS/06479438_test.csv
+06601000,"OMAHA CR AT HOMER, NEBR",./data/Caravan-CAMELS/06601000.csv,./data/Caravan-CAMELS/06601000_train.csv,./data/Caravan-CAMELS/06601000_test.csv
+06622700,"NORTH BRUSH CREEK NEAR SARATOGA, WY",./data/Caravan-CAMELS/06622700.csv,./data/Caravan-CAMELS/06622700_train.csv,./data/Caravan-CAMELS/06622700_test.csv
+06623800,"ENCAMPMENT RIVER AB HOG PARK CR, NR ENCAMPMENT, WY",./data/Caravan-CAMELS/06623800.csv,./data/Caravan-CAMELS/06623800_train.csv,./data/Caravan-CAMELS/06623800_test.csv
+06632400,"ROCK CREEK AB KING CANYON CANAL, NR ARLINGTON, WY",./data/Caravan-CAMELS/06632400.csv,./data/Caravan-CAMELS/06632400_train.csv,./data/Caravan-CAMELS/06632400_test.csv
+06803510,"LITTLE SALT CREEK NEAR LINCOLN, NEBR.",./data/Caravan-CAMELS/06803510.csv,./data/Caravan-CAMELS/06803510_train.csv,./data/Caravan-CAMELS/06803510_test.csv
+06803530,"ROCK CREEK NEAR CERESCO, NEBR.",./data/Caravan-CAMELS/06803530.csv,./data/Caravan-CAMELS/06803530_train.csv,./data/Caravan-CAMELS/06803530_test.csv
+06814000,"TURKEY C NR SENECA, KS",./data/Caravan-CAMELS/06814000.csv,./data/Caravan-CAMELS/06814000_train.csv,./data/Caravan-CAMELS/06814000_test.csv
+06847900,"PRAIRIE DOG C AB KEITH SEBELIUS LAKE, KS",./data/Caravan-CAMELS/06847900.csv,./data/Caravan-CAMELS/06847900_train.csv,./data/Caravan-CAMELS/06847900_test.csv
+06853800,"WHITE ROCK C NR BURR OAK, KS",./data/Caravan-CAMELS/06853800.csv,./data/Caravan-CAMELS/06853800_train.csv,./data/Caravan-CAMELS/06853800_test.csv
+06876700,"SALT C NR ADA, KS",./data/Caravan-CAMELS/06876700.csv,./data/Caravan-CAMELS/06876700_train.csv,./data/Caravan-CAMELS/06876700_test.csv
+06878000,"CHAPMAN C NR CHAPMAN, KS",./data/Caravan-CAMELS/06878000.csv,./data/Caravan-CAMELS/06878000_train.csv,./data/Caravan-CAMELS/06878000_test.csv
+06885500,"BLACK VERMILLION R NR FRANKFORT, KS",./data/Caravan-CAMELS/06885500.csv,./data/Caravan-CAMELS/06885500_train.csv,./data/Caravan-CAMELS/06885500_test.csv
+06888500,"MILL C NR PAXICO, KS",./data/Caravan-CAMELS/06888500.csv,./data/Caravan-CAMELS/06888500_train.csv,./data/Caravan-CAMELS/06888500_test.csv
+06889200,"SOLDIER C NR DELIA, KS",./data/Caravan-CAMELS/06889200.csv,./data/Caravan-CAMELS/06889200_train.csv,./data/Caravan-CAMELS/06889200_test.csv
+06889500,"SOLDIER C NR TOPEKA, KS",./data/Caravan-CAMELS/06889500.csv,./data/Caravan-CAMELS/06889500_train.csv,./data/Caravan-CAMELS/06889500_test.csv
+06892000,"STRANGER C NR TONGANOXIE, KS",./data/Caravan-CAMELS/06892000.csv,./data/Caravan-CAMELS/06892000_train.csv,./data/Caravan-CAMELS/06892000_test.csv
+06903400,"Chariton River near Chariton, IA",./data/Caravan-CAMELS/06903400.csv,./data/Caravan-CAMELS/06903400_train.csv,./data/Caravan-CAMELS/06903400_test.csv
+06906800,"Lamine River near Otterville, MO",./data/Caravan-CAMELS/06906800.csv,./data/Caravan-CAMELS/06906800_train.csv,./data/Caravan-CAMELS/06906800_test.csv
+06910800,"MARAIS DES CYGNES R NR READING, KS",./data/Caravan-CAMELS/06910800.csv,./data/Caravan-CAMELS/06910800_train.csv,./data/Caravan-CAMELS/06910800_test.csv
+06911900,"DRAGOON C NR BURLINGAME, KS",./data/Caravan-CAMELS/06911900.csv,./data/Caravan-CAMELS/06911900_train.csv,./data/Caravan-CAMELS/06911900_test.csv
+06917000,"L OSAGE R AT FULTON, KS",./data/Caravan-CAMELS/06917000.csv,./data/Caravan-CAMELS/06917000_train.csv,./data/Caravan-CAMELS/06917000_test.csv
+06918460,"Turnback Creek above Greenfield, MO",./data/Caravan-CAMELS/06918460.csv,./data/Caravan-CAMELS/06918460_train.csv,./data/Caravan-CAMELS/06918460_test.csv
+06919500,"Cedar Creek near Pleasant View, MO",./data/Caravan-CAMELS/06919500.csv,./data/Caravan-CAMELS/06919500_train.csv,./data/Caravan-CAMELS/06919500_test.csv
+06921070,"Pomme de Terre River near Polk, MO",./data/Caravan-CAMELS/06921070.csv,./data/Caravan-CAMELS/06921070_train.csv,./data/Caravan-CAMELS/06921070_test.csv
+06921200,"Lindley Creek near Polk, MO",./data/Caravan-CAMELS/06921200.csv,./data/Caravan-CAMELS/06921200_train.csv,./data/Caravan-CAMELS/06921200_test.csv
+07057500,"North Fork River near Tecumseh, MO",./data/Caravan-CAMELS/07057500.csv,./data/Caravan-CAMELS/07057500_train.csv,./data/Caravan-CAMELS/07057500_test.csv
+07060710,"North Sylamore Creek near Fifty Six, AR",./data/Caravan-CAMELS/07060710.csv,./data/Caravan-CAMELS/07060710_train.csv,./data/Caravan-CAMELS/07060710_test.csv
+07066000,"Jacks Fork at Eminence, MO",./data/Caravan-CAMELS/07066000.csv,./data/Caravan-CAMELS/07066000_train.csv,./data/Caravan-CAMELS/07066000_test.csv
+07142300,"RATTLESNAKE C NR MACKSVILLE, KS",./data/Caravan-CAMELS/07142300.csv,./data/Caravan-CAMELS/07142300_train.csv,./data/Caravan-CAMELS/07142300_test.csv
+07145700,"SLATE C AT WELLINGTON, KS",./data/Caravan-CAMELS/07145700.csv,./data/Caravan-CAMELS/07145700_train.csv,./data/Caravan-CAMELS/07145700_test.csv
+07167500,"OTTER C AT CLIMAX, KS",./data/Caravan-CAMELS/07167500.csv,./data/Caravan-CAMELS/07167500_train.csv,./data/Caravan-CAMELS/07167500_test.csv
+07180500,"CEDAR C NR CEDAR POINT, KS",./data/Caravan-CAMELS/07180500.csv,./data/Caravan-CAMELS/07180500_train.csv,./data/Caravan-CAMELS/07180500_test.csv
+07184000,"LIGHTNING C NR MCCUNE, KS",./data/Caravan-CAMELS/07184000.csv,./data/Caravan-CAMELS/07184000_train.csv,./data/Caravan-CAMELS/07184000_test.csv
+07196900,"Baron Fork at Dutch Mills, AR",./data/Caravan-CAMELS/07196900.csv,./data/Caravan-CAMELS/07196900_train.csv,./data/Caravan-CAMELS/07196900_test.csv
+07197000,"Baron Fork at Eldon, OK",./data/Caravan-CAMELS/07197000.csv,./data/Caravan-CAMELS/07197000_train.csv,./data/Caravan-CAMELS/07197000_test.csv
+07208500,"RAYADO CREEK NEAR CIMARRON, NM",./data/Caravan-CAMELS/07208500.csv,./data/Caravan-CAMELS/07208500_train.csv,./data/Caravan-CAMELS/07208500_test.csv
+07261000,"Cadron Creek near Guy, AR",./data/Caravan-CAMELS/07261000.csv,./data/Caravan-CAMELS/07261000_train.csv,./data/Caravan-CAMELS/07261000_test.csv
+07263295,"Maumelle River at Williams Junction, AR",./data/Caravan-CAMELS/07263295.csv,./data/Caravan-CAMELS/07263295_train.csv,./data/Caravan-CAMELS/07263295_test.csv
+07290650,"BAYOU PIERRE NR WILLOWS, MS",./data/Caravan-CAMELS/07290650.csv,./data/Caravan-CAMELS/07290650_train.csv,./data/Caravan-CAMELS/07290650_test.csv
+07291000,"HOMOCHITTO RIVER AT EDDICETON, MS",./data/Caravan-CAMELS/07291000.csv,./data/Caravan-CAMELS/07291000_train.csv,./data/Caravan-CAMELS/07291000_test.csv
+07295000,"BUFFALO RIVER NR WOODVILLE, MS",./data/Caravan-CAMELS/07295000.csv,./data/Caravan-CAMELS/07295000_train.csv,./data/Caravan-CAMELS/07295000_test.csv
+07299670,"Groesbeck Ck at SH 6 nr Quanah, TX",./data/Caravan-CAMELS/07299670.csv,./data/Caravan-CAMELS/07299670_train.csv,./data/Caravan-CAMELS/07299670_test.csv
+07301410,"Sweetwater Ck nr Kelton, TX",./data/Caravan-CAMELS/07301410.csv,./data/Caravan-CAMELS/07301410_train.csv,./data/Caravan-CAMELS/07301410_test.csv
+07315200,"E Fk Little Wichita Rv nr Henrietta, TX",./data/Caravan-CAMELS/07315200.csv,./data/Caravan-CAMELS/07315200_train.csv,./data/Caravan-CAMELS/07315200_test.csv
+07315700,"Mud Creek near Courtney, OK",./data/Caravan-CAMELS/07315700.csv,./data/Caravan-CAMELS/07315700_train.csv,./data/Caravan-CAMELS/07315700_test.csv
+07335700,"Kiamichi River near Big Cedar, OK",./data/Caravan-CAMELS/07335700.csv,./data/Caravan-CAMELS/07335700_train.csv,./data/Caravan-CAMELS/07335700_test.csv
+07340300,"Cossatot River near Vandervoort, AR",./data/Caravan-CAMELS/07340300.csv,./data/Caravan-CAMELS/07340300_train.csv,./data/Caravan-CAMELS/07340300_test.csv
+07346045,"Black Cypress Bayou at Jefferson, TX",./data/Caravan-CAMELS/07346045.csv,./data/Caravan-CAMELS/07346045_train.csv,./data/Caravan-CAMELS/07346045_test.csv
+07359610,"Caddo River near Caddo Gap, AR",./data/Caravan-CAMELS/07359610.csv,./data/Caravan-CAMELS/07359610_train.csv,./data/Caravan-CAMELS/07359610_test.csv
+07362100,"SMACKOVER CREEK NEAR SMACKOVER, ARK.",./data/Caravan-CAMELS/07362100.csv,./data/Caravan-CAMELS/07362100_train.csv,./data/Caravan-CAMELS/07362100_test.csv
+07373000,"Big Creek at Pollock, LA",./data/Caravan-CAMELS/07373000.csv,./data/Caravan-CAMELS/07373000_train.csv,./data/Caravan-CAMELS/07373000_test.csv
+07375000,"Tchefuncta River near Folsom, LA",./data/Caravan-CAMELS/07375000.csv,./data/Caravan-CAMELS/07375000_train.csv,./data/Caravan-CAMELS/07375000_test.csv
+07376000,"Tickfaw River at Holden, LA",./data/Caravan-CAMELS/07376000.csv,./data/Caravan-CAMELS/07376000_train.csv,./data/Caravan-CAMELS/07376000_test.csv
+08013000,"CALCASIEU RIVER NR GLENMORA, LA",./data/Caravan-CAMELS/08013000.csv,./data/Caravan-CAMELS/08013000_train.csv,./data/Caravan-CAMELS/08013000_test.csv
+08014500,"Whiskey Chitto Creek Near Oberlin, LA",./data/Caravan-CAMELS/08014500.csv,./data/Caravan-CAMELS/08014500_train.csv,./data/Caravan-CAMELS/08014500_test.csv
+08023080,"Bayou Grand Cane near Stanley, LA",./data/Caravan-CAMELS/08023080.csv,./data/Caravan-CAMELS/08023080_train.csv,./data/Caravan-CAMELS/08023080_test.csv
+08025500,"Bayou Toro near Toro, LA",./data/Caravan-CAMELS/08025500.csv,./data/Caravan-CAMELS/08025500_train.csv,./data/Caravan-CAMELS/08025500_test.csv
+08029500,"Big Cow Ck nr Newton, TX",./data/Caravan-CAMELS/08029500.csv,./data/Caravan-CAMELS/08029500_train.csv,./data/Caravan-CAMELS/08029500_test.csv
+08050800,"Timber Ck nr Collinsville, TX",./data/Caravan-CAMELS/08050800.csv,./data/Caravan-CAMELS/08050800_train.csv,./data/Caravan-CAMELS/08050800_test.csv
+08066200,"Long King Ck at Livingston, TX",./data/Caravan-CAMELS/08066200.csv,./data/Caravan-CAMELS/08066200_train.csv,./data/Caravan-CAMELS/08066200_test.csv
+08066300,"Menard Ck nr Rye, TX",./data/Caravan-CAMELS/08066300.csv,./data/Caravan-CAMELS/08066300_train.csv,./data/Caravan-CAMELS/08066300_test.csv
+08070000,"E Fk San Jacinto Rv nr Cleveland, TX",./data/Caravan-CAMELS/08070000.csv,./data/Caravan-CAMELS/08070000_train.csv,./data/Caravan-CAMELS/08070000_test.csv
+08070200,"E Fk San Jacinto Rv nr New Caney, TX",./data/Caravan-CAMELS/08070200.csv,./data/Caravan-CAMELS/08070200_train.csv,./data/Caravan-CAMELS/08070200_test.csv
+08082700,"Millers Ck nr Munday, TX",./data/Caravan-CAMELS/08082700.csv,./data/Caravan-CAMELS/08082700_train.csv,./data/Caravan-CAMELS/08082700_test.csv
+08086212,"Hubbard Ck bl Albany, TX",./data/Caravan-CAMELS/08086212.csv,./data/Caravan-CAMELS/08086212_train.csv,./data/Caravan-CAMELS/08086212_test.csv
+08086290,"Big Sandy Ck abv Breckenridge, TX",./data/Caravan-CAMELS/08086290.csv,./data/Caravan-CAMELS/08086290_train.csv,./data/Caravan-CAMELS/08086290_test.csv
+08101000,"Cowhouse Ck at Pidcoke, TX",./data/Caravan-CAMELS/08101000.csv,./data/Caravan-CAMELS/08101000_train.csv,./data/Caravan-CAMELS/08101000_test.csv
+08104900,"S Fk San Gabriel Rv at Georgetown, TX",./data/Caravan-CAMELS/08104900.csv,./data/Caravan-CAMELS/08104900_train.csv,./data/Caravan-CAMELS/08104900_test.csv
+08109700,"Middle Yegua Ck nr Dime Box, TX",./data/Caravan-CAMELS/08109700.csv,./data/Caravan-CAMELS/08109700_train.csv,./data/Caravan-CAMELS/08109700_test.csv
+08150800,"Beaver Ck nr Mason, TX",./data/Caravan-CAMELS/08150800.csv,./data/Caravan-CAMELS/08150800_train.csv,./data/Caravan-CAMELS/08150800_test.csv
+08155200,"Barton Ck at SH 71 nr Oak Hill, TX",./data/Caravan-CAMELS/08155200.csv,./data/Caravan-CAMELS/08155200_train.csv,./data/Caravan-CAMELS/08155200_test.csv
+08158700,"Onion Ck nr Driftwood, TX",./data/Caravan-CAMELS/08158700.csv,./data/Caravan-CAMELS/08158700_train.csv,./data/Caravan-CAMELS/08158700_test.csv
+08164300,"Navidad Rv nr Hallettsville, TX",./data/Caravan-CAMELS/08164300.csv,./data/Caravan-CAMELS/08164300_train.csv,./data/Caravan-CAMELS/08164300_test.csv
+08164600,"Garcitas Ck nr Inez, TX",./data/Caravan-CAMELS/08164600.csv,./data/Caravan-CAMELS/08164600_train.csv,./data/Caravan-CAMELS/08164600_test.csv
+08165300,"N Fk Guadalupe Rv nr Hunt, TX",./data/Caravan-CAMELS/08165300.csv,./data/Caravan-CAMELS/08165300_train.csv,./data/Caravan-CAMELS/08165300_test.csv
+08171300,"Blanco Rv nr Kyle, TX",./data/Caravan-CAMELS/08171300.csv,./data/Caravan-CAMELS/08171300_train.csv,./data/Caravan-CAMELS/08171300_test.csv
+08175000,"Sandies Ck nr Westhoff, TX",./data/Caravan-CAMELS/08175000.csv,./data/Caravan-CAMELS/08175000_train.csv,./data/Caravan-CAMELS/08175000_test.csv
+08176900,"Coleto Ck at Arnold Rd nr Schroeder, TX",./data/Caravan-CAMELS/08176900.csv,./data/Caravan-CAMELS/08176900_train.csv,./data/Caravan-CAMELS/08176900_test.csv
+08178880,"Medina Rv at Bandera, TX",./data/Caravan-CAMELS/08178880.csv,./data/Caravan-CAMELS/08178880_train.csv,./data/Caravan-CAMELS/08178880_test.csv
+08189500,"Mission Rv at Refugio, TX",./data/Caravan-CAMELS/08189500.csv,./data/Caravan-CAMELS/08189500_train.csv,./data/Caravan-CAMELS/08189500_test.csv
+08190000,"Nueces Rv at Laguna, TX",./data/Caravan-CAMELS/08190000.csv,./data/Caravan-CAMELS/08190000_train.csv,./data/Caravan-CAMELS/08190000_test.csv
+08190500,"W Nueces Rv nr Brackettville, TX",./data/Caravan-CAMELS/08190500.csv,./data/Caravan-CAMELS/08190500_train.csv,./data/Caravan-CAMELS/08190500_test.csv
+08194200,"San Casimiro Ck nr Freer, TX",./data/Caravan-CAMELS/08194200.csv,./data/Caravan-CAMELS/08194200_train.csv,./data/Caravan-CAMELS/08194200_test.csv
+08195000,"Frio Rv at Concan, TX",./data/Caravan-CAMELS/08195000.csv,./data/Caravan-CAMELS/08195000_train.csv,./data/Caravan-CAMELS/08195000_test.csv
+08196000,"Dry Frio Rv nr Reagan Wells, TX",./data/Caravan-CAMELS/08196000.csv,./data/Caravan-CAMELS/08196000_train.csv,./data/Caravan-CAMELS/08196000_test.csv
+08198500,"Sabinal Rv at Sabinal, TX",./data/Caravan-CAMELS/08198500.csv,./data/Caravan-CAMELS/08198500_train.csv,./data/Caravan-CAMELS/08198500_test.csv
+08200000,"Hondo Ck nr Tarpley, TX",./data/Caravan-CAMELS/08200000.csv,./data/Caravan-CAMELS/08200000_train.csv,./data/Caravan-CAMELS/08200000_test.csv
+08202700,"Seco Ck at Rowe Ranch nr D'Hanis, TX",./data/Caravan-CAMELS/08202700.csv,./data/Caravan-CAMELS/08202700_train.csv,./data/Caravan-CAMELS/08202700_test.csv
+08269000,"RIO PUEBLO DE TAOS NEAR TAOS, NM",./data/Caravan-CAMELS/08269000.csv,./data/Caravan-CAMELS/08269000_train.csv,./data/Caravan-CAMELS/08269000_test.csv
+08324000,"JEMEZ RIVER NEAR JEMEZ, NM",./data/Caravan-CAMELS/08324000.csv,./data/Caravan-CAMELS/08324000_train.csv,./data/Caravan-CAMELS/08324000_test.csv
+08377900,"RIO MORA NEAR TERRERO, NM",./data/Caravan-CAMELS/08377900.csv,./data/Caravan-CAMELS/08377900_train.csv,./data/Caravan-CAMELS/08377900_test.csv
+08378500,"PECOS RIVER NEAR PECOS, NM",./data/Caravan-CAMELS/08378500.csv,./data/Caravan-CAMELS/08378500_train.csv,./data/Caravan-CAMELS/08378500_test.csv
+08380500,"GALLINAS CREEK NEAR MONTEZUMA, NM",./data/Caravan-CAMELS/08380500.csv,./data/Caravan-CAMELS/08380500_train.csv,./data/Caravan-CAMELS/08380500_test.csv
+09081600,"CRYSTAL RIVER AB AVALANCHE C, NEAR REDSTONE, CO.",./data/Caravan-CAMELS/09081600.csv,./data/Caravan-CAMELS/09081600_train.csv,./data/Caravan-CAMELS/09081600_test.csv
+09107000,"TAYLOR RIVER AT TAYLOR PARK, CO.",./data/Caravan-CAMELS/09107000.csv,./data/Caravan-CAMELS/09107000_train.csv,./data/Caravan-CAMELS/09107000_test.csv
+09210500,"FONTENELLE C NR HERSCHLER RANCH, NR FONTENELLE, WY",./data/Caravan-CAMELS/09210500.csv,./data/Caravan-CAMELS/09210500_train.csv,./data/Caravan-CAMELS/09210500_test.csv
+09223000,"HAMS FORK BELOW POLE CREEK, NEAR FRONTIER, WY",./data/Caravan-CAMELS/09223000.csv,./data/Caravan-CAMELS/09223000_train.csv,./data/Caravan-CAMELS/09223000_test.csv
+09312600,"WHITE RIVER BL TABBYUNE C NEAR SOLDIER SUMMIT, UT",./data/Caravan-CAMELS/09312600.csv,./data/Caravan-CAMELS/09312600_train.csv,./data/Caravan-CAMELS/09312600_test.csv
+09352900,"VALLECITO CREEK NEAR BAYFIELD, CO.",./data/Caravan-CAMELS/09352900.csv,./data/Caravan-CAMELS/09352900_train.csv,./data/Caravan-CAMELS/09352900_test.csv
+09386900,"RIO NUTRIA NEAR RAMAH, NM",./data/Caravan-CAMELS/09386900.csv,./data/Caravan-CAMELS/09386900_train.csv,./data/Caravan-CAMELS/09386900_test.csv
+09404450,"EAST FORK VIRGIN RIVER NEAR GLENDALE, UT",./data/Caravan-CAMELS/09404450.csv,./data/Caravan-CAMELS/09404450_train.csv,./data/Caravan-CAMELS/09404450_test.csv
+09430600,"MOGOLLON CREEK NEAR CLIFF, NM",./data/Caravan-CAMELS/09430600.csv,./data/Caravan-CAMELS/09430600_train.csv,./data/Caravan-CAMELS/09430600_test.csv
+09447800,"BONITA CREEK NEAR MORENCI, AZ.",./data/Caravan-CAMELS/09447800.csv,./data/Caravan-CAMELS/09447800_train.csv,./data/Caravan-CAMELS/09447800_test.csv
+09480000,"SANTA CRUZ RIVER NEAR LOCHIEL, AZ.",./data/Caravan-CAMELS/09480000.csv,./data/Caravan-CAMELS/09480000_train.csv,./data/Caravan-CAMELS/09480000_test.csv
+09484600,"PANTANO WASH NEAR VAIL, AZ.",./data/Caravan-CAMELS/09484600.csv,./data/Caravan-CAMELS/09484600_train.csv,./data/Caravan-CAMELS/09484600_test.csv
+09492400,"EAST FORK WHITE RIVER NEAR FORT APACHE, AZ.",./data/Caravan-CAMELS/09492400.csv,./data/Caravan-CAMELS/09492400_train.csv,./data/Caravan-CAMELS/09492400_test.csv
+09494000,"WHITE RIVER NEAR FORT APACHE, AZ.",./data/Caravan-CAMELS/09494000.csv,./data/Caravan-CAMELS/09494000_train.csv,./data/Caravan-CAMELS/09494000_test.csv
+09497800,"CIBECUE CREEK NEAR CHYSOTILE, AZ.",./data/Caravan-CAMELS/09497800.csv,./data/Caravan-CAMELS/09497800_train.csv,./data/Caravan-CAMELS/09497800_test.csv
+09497980,"CHERRY CREEK NEAR GLOBE, AZ.",./data/Caravan-CAMELS/09497980.csv,./data/Caravan-CAMELS/09497980_train.csv,./data/Caravan-CAMELS/09497980_test.csv
+09505200,"WET BEAVER CREEK NEAR RIMROCK, AZ.",./data/Caravan-CAMELS/09505200.csv,./data/Caravan-CAMELS/09505200_train.csv,./data/Caravan-CAMELS/09505200_test.csv
+09505350,"DRY BEAVER CREEK NEAR RIMROCK, AZ.",./data/Caravan-CAMELS/09505350.csv,./data/Caravan-CAMELS/09505350_train.csv,./data/Caravan-CAMELS/09505350_test.csv
+09505800,"WEST CLEAR CREEK NEAR CAMP VERDE, AZ.",./data/Caravan-CAMELS/09505800.csv,./data/Caravan-CAMELS/09505800_train.csv,./data/Caravan-CAMELS/09505800_test.csv
+09510200,"SYCAMORE CREEK NEAR FORT MCDOWELL, AZ.",./data/Caravan-CAMELS/09510200.csv,./data/Caravan-CAMELS/09510200_train.csv,./data/Caravan-CAMELS/09510200_test.csv
+09512280,"CAVE CREEK BLW COTTONWOOD CR NEAR CAVE CREEK, AZ.",./data/Caravan-CAMELS/09512280.csv,./data/Caravan-CAMELS/09512280_train.csv,./data/Caravan-CAMELS/09512280_test.csv
+09513780,"NEW RIVER NEAR ROCK SPRINGS, AZ.",./data/Caravan-CAMELS/09513780.csv,./data/Caravan-CAMELS/09513780_train.csv,./data/Caravan-CAMELS/09513780_test.csv
+10023000,"BIG CREEK NEAR RANDOLPH, UT",./data/Caravan-CAMELS/10023000.csv,./data/Caravan-CAMELS/10023000_train.csv,./data/Caravan-CAMELS/10023000_test.csv
+10172700,"VERNON CREEK NEAR VERNON, UT",./data/Caravan-CAMELS/10172700.csv,./data/Caravan-CAMELS/10172700_train.csv,./data/Caravan-CAMELS/10172700_test.csv
+10173450,"MAMMOTH CREEK ABV WEST HATCH DITCH, NEAR HATCH, UT",./data/Caravan-CAMELS/10173450.csv,./data/Caravan-CAMELS/10173450_train.csv,./data/Caravan-CAMELS/10173450_test.csv
+10205030,"SALINA CREEK NEAR EMERY, UT",./data/Caravan-CAMELS/10205030.csv,./data/Caravan-CAMELS/10205030_train.csv,./data/Caravan-CAMELS/10205030_test.csv
+10234500,"BEAVER RIVER NEAR BEAVER, UT",./data/Caravan-CAMELS/10234500.csv,./data/Caravan-CAMELS/10234500_train.csv,./data/Caravan-CAMELS/10234500_test.csv
+10242000,"COAL CREEK NEAR CEDAR CITY, UT",./data/Caravan-CAMELS/10242000.csv,./data/Caravan-CAMELS/10242000_train.csv,./data/Caravan-CAMELS/10242000_test.csv
+10249300,"S TWIN R NR ROUND MOUNTAIN, NV",./data/Caravan-CAMELS/10249300.csv,./data/Caravan-CAMELS/10249300_train.csv,./data/Caravan-CAMELS/10249300_test.csv
+10258500,PALM CYN C NR PALM SPRINGS CA,./data/Caravan-CAMELS/10258500.csv,./data/Caravan-CAMELS/10258500_train.csv,./data/Caravan-CAMELS/10258500_test.csv
+10259200,DEEP C NR PALM DESERT CA,./data/Caravan-CAMELS/10259200.csv,./data/Caravan-CAMELS/10259200_train.csv,./data/Caravan-CAMELS/10259200_test.csv
+10263500,BIG ROCK C NR VALYERMO CA,./data/Caravan-CAMELS/10263500.csv,./data/Caravan-CAMELS/10263500_train.csv,./data/Caravan-CAMELS/10263500_test.csv
+10329500,"MARTIN C NR PARADISE VALLEY, NV",./data/Caravan-CAMELS/10329500.csv,./data/Caravan-CAMELS/10329500_train.csv,./data/Caravan-CAMELS/10329500_test.csv
+10396000,DONNER UND BLITZEN RIVER NR FRENCHGLEN OR,./data/Caravan-CAMELS/10396000.csv,./data/Caravan-CAMELS/10396000_train.csv,./data/Caravan-CAMELS/10396000_test.csv
+11124500,SANTA CRUZ C NR SANTA YNEZ CA,./data/Caravan-CAMELS/11124500.csv,./data/Caravan-CAMELS/11124500_train.csv,./data/Caravan-CAMELS/11124500_test.csv
+11143000,BIG SUR R NR BIG SUR CA,./data/Caravan-CAMELS/11143000.csv,./data/Caravan-CAMELS/11143000_train.csv,./data/Caravan-CAMELS/11143000_test.csv
+11148900,NACIMIENTO R BL SAPAQUE C NR BRYSON CA,./data/Caravan-CAMELS/11148900.csv,./data/Caravan-CAMELS/11148900_train.csv,./data/Caravan-CAMELS/11148900_test.csv
+11151300,SAN LORENZO C BL BITTERWATER C NR KING CITY CA,./data/Caravan-CAMELS/11151300.csv,./data/Caravan-CAMELS/11151300_train.csv,./data/Caravan-CAMELS/11151300_test.csv
+11162500,PESCADERO C NR PESCADERO CA,./data/Caravan-CAMELS/11162500.csv,./data/Caravan-CAMELS/11162500_train.csv,./data/Caravan-CAMELS/11162500_test.csv
+11176400,ARROYO VALLE BL LANG CN NR LIVERMORE CA,./data/Caravan-CAMELS/11176400.csv,./data/Caravan-CAMELS/11176400_train.csv,./data/Caravan-CAMELS/11176400_test.csv
+11224500,LOS GATOS C AB NUNEZ CYN NR COALINGA CA,./data/Caravan-CAMELS/11224500.csv,./data/Caravan-CAMELS/11224500_train.csv,./data/Caravan-CAMELS/11224500_test.csv
+11230500,BEAR C NR LAKE THOMAS A EDISON CA,./data/Caravan-CAMELS/11230500.csv,./data/Caravan-CAMELS/11230500_train.csv,./data/Caravan-CAMELS/11230500_test.csv
+11253310,CANTUA C NR CANTUA CREEK CA,./data/Caravan-CAMELS/11253310.csv,./data/Caravan-CAMELS/11253310_train.csv,./data/Caravan-CAMELS/11253310_test.csv
+11264500,MERCED R A HAPPY ISLES BRIDGE NR YOSEMITE CA,./data/Caravan-CAMELS/11264500.csv,./data/Caravan-CAMELS/11264500_train.csv,./data/Caravan-CAMELS/11264500_test.csv
+11266500,MERCED R A POHONO BRIDGE NR YOSEMITE CA,./data/Caravan-CAMELS/11266500.csv,./data/Caravan-CAMELS/11266500_train.csv,./data/Caravan-CAMELS/11266500_test.csv
+11274500,ORESTIMBA C NR NEWMAN CA,./data/Caravan-CAMELS/11274500.csv,./data/Caravan-CAMELS/11274500_train.csv,./data/Caravan-CAMELS/11274500_test.csv
+11274630,DEL PUERTO C NR PATTERSON CA,./data/Caravan-CAMELS/11274630.csv,./data/Caravan-CAMELS/11274630_train.csv,./data/Caravan-CAMELS/11274630_test.csv
+11381500,MILL C NR LOS MOLINOS CA,./data/Caravan-CAMELS/11381500.csv,./data/Caravan-CAMELS/11381500_train.csv,./data/Caravan-CAMELS/11381500_test.csv
+11383500,DEER C NR VINA CA,./data/Caravan-CAMELS/11383500.csv,./data/Caravan-CAMELS/11383500_train.csv,./data/Caravan-CAMELS/11383500_test.csv
+11451100,NF CACHE C A HOUGH SPRING NR CLEARLAKE OAKS CA,./data/Caravan-CAMELS/11451100.csv,./data/Caravan-CAMELS/11451100_train.csv,./data/Caravan-CAMELS/11451100_test.csv
+11468500,NOYO R NR FORT BRAGG CA,./data/Caravan-CAMELS/11468500.csv,./data/Caravan-CAMELS/11468500_train.csv,./data/Caravan-CAMELS/11468500_test.csv
+11473900,MF EEL R NR DOS RIOS CA,./data/Caravan-CAMELS/11473900.csv,./data/Caravan-CAMELS/11473900_train.csv,./data/Caravan-CAMELS/11473900_test.csv
+11478500,VAN DUZEN R NR BRIDGEVILLE CA,./data/Caravan-CAMELS/11478500.csv,./data/Caravan-CAMELS/11478500_train.csv,./data/Caravan-CAMELS/11478500_test.csv
+11480390,MAD R AB RUTH RES NR FOREST GLEN CA,./data/Caravan-CAMELS/11480390.csv,./data/Caravan-CAMELS/11480390_train.csv,./data/Caravan-CAMELS/11480390_test.csv
+11481200,LITTLE R NR TRINIDAD CA,./data/Caravan-CAMELS/11481200.csv,./data/Caravan-CAMELS/11481200_train.csv,./data/Caravan-CAMELS/11481200_test.csv
+11482500,REDWOOD C A ORICK CA,./data/Caravan-CAMELS/11482500.csv,./data/Caravan-CAMELS/11482500_train.csv,./data/Caravan-CAMELS/11482500_test.csv
+11522500,SALMON R A SOMES BAR CA,./data/Caravan-CAMELS/11522500.csv,./data/Caravan-CAMELS/11522500_train.csv,./data/Caravan-CAMELS/11522500_test.csv
+11523200,TRINITY R AB COFFEE C NR TRINITY CTR CA,./data/Caravan-CAMELS/11523200.csv,./data/Caravan-CAMELS/11523200_train.csv,./data/Caravan-CAMELS/11523200_test.csv
+11528700,SF TRINITY R BL HYAMPOM CA,./data/Caravan-CAMELS/11528700.csv,./data/Caravan-CAMELS/11528700_train.csv,./data/Caravan-CAMELS/11528700_test.csv
+11532500,SMITH R NR CRESCENT CITY CA,./data/Caravan-CAMELS/11532500.csv,./data/Caravan-CAMELS/11532500_train.csv,./data/Caravan-CAMELS/11532500_test.csv
+12010000,"NASELLE RIVER NEAR NASELLE, WA",./data/Caravan-CAMELS/12010000.csv,./data/Caravan-CAMELS/12010000_train.csv,./data/Caravan-CAMELS/12010000_test.csv
+12013500,"WILLAPA RIVER NEAR WILLAPA, WA",./data/Caravan-CAMELS/12013500.csv,./data/Caravan-CAMELS/12013500_train.csv,./data/Caravan-CAMELS/12013500_test.csv
+12020000,"CHEHALIS RIVER NEAR DOTY, WA",./data/Caravan-CAMELS/12020000.csv,./data/Caravan-CAMELS/12020000_train.csv,./data/Caravan-CAMELS/12020000_test.csv
+12025000,"NEWAUKUM RIVER NEAR CHEHALIS, WA",./data/Caravan-CAMELS/12025000.csv,./data/Caravan-CAMELS/12025000_train.csv,./data/Caravan-CAMELS/12025000_test.csv
+12025700,"SKOOKUMCHUCK RIVER NEAR VAIL, WA",./data/Caravan-CAMELS/12025700.csv,./data/Caravan-CAMELS/12025700_train.csv,./data/Caravan-CAMELS/12025700_test.csv
+12035000,"SATSOP RIVER NEAR SATSOP, WA",./data/Caravan-CAMELS/12035000.csv,./data/Caravan-CAMELS/12035000_train.csv,./data/Caravan-CAMELS/12035000_test.csv
+12040500,"QUEETS RIVER NEAR CLEARWATER, WA",./data/Caravan-CAMELS/12040500.csv,./data/Caravan-CAMELS/12040500_train.csv,./data/Caravan-CAMELS/12040500_test.csv
+12041200,"HOH RIVER AT US HIGHWAY 101 NEAR FORKS, WA",./data/Caravan-CAMELS/12041200.csv,./data/Caravan-CAMELS/12041200_train.csv,./data/Caravan-CAMELS/12041200_test.csv
+12043000,"CALAWAH RIVER NEAR FORKS, WA",./data/Caravan-CAMELS/12043000.csv,./data/Caravan-CAMELS/12043000_train.csv,./data/Caravan-CAMELS/12043000_test.csv
+12048000,"DUNGENESS RIVER NEAR SEQUIM, WA",./data/Caravan-CAMELS/12048000.csv,./data/Caravan-CAMELS/12048000_train.csv,./data/Caravan-CAMELS/12048000_test.csv
+12054000,"DUCKABUSH RIVER NEAR BRINNON, WA",./data/Caravan-CAMELS/12054000.csv,./data/Caravan-CAMELS/12054000_train.csv,./data/Caravan-CAMELS/12054000_test.csv
+12056500,"NF SKOKOMISH R BL STAIRCASE RPDS NR HOODSPORT, WA",./data/Caravan-CAMELS/12056500.csv,./data/Caravan-CAMELS/12056500_train.csv,./data/Caravan-CAMELS/12056500_test.csv
+12082500,"NISQUALLY RIVER NEAR NATIONAL, WA",./data/Caravan-CAMELS/12082500.csv,./data/Caravan-CAMELS/12082500_train.csv,./data/Caravan-CAMELS/12082500_test.csv
+12092000,"PUYALLUP RIVER NEAR ELECTRON, WA",./data/Caravan-CAMELS/12092000.csv,./data/Caravan-CAMELS/12092000_train.csv,./data/Caravan-CAMELS/12092000_test.csv
+12095000,"SOUTH PRAIRIE CREEK AT SOUTH PRAIRIE, WA",./data/Caravan-CAMELS/12095000.csv,./data/Caravan-CAMELS/12095000_train.csv,./data/Caravan-CAMELS/12095000_test.csv
+12115000,"CEDAR RIVER NEAR CEDAR FALLS, WA",./data/Caravan-CAMELS/12115000.csv,./data/Caravan-CAMELS/12115000_train.csv,./data/Caravan-CAMELS/12115000_test.csv
+12141300,"MIDDLE FORK SNOQUALMIE RIVER NEAR TANNER, WA",./data/Caravan-CAMELS/12141300.csv,./data/Caravan-CAMELS/12141300_train.csv,./data/Caravan-CAMELS/12141300_test.csv
+12143600,"SF SNOQUALMIE RIVER AT EDGEWICK, WA",./data/Caravan-CAMELS/12143600.csv,./data/Caravan-CAMELS/12143600_train.csv,./data/Caravan-CAMELS/12143600_test.csv
+12144000,"SF SNOQUALMIE RIVER AT NORTH BEND, WA",./data/Caravan-CAMELS/12144000.csv,./data/Caravan-CAMELS/12144000_train.csv,./data/Caravan-CAMELS/12144000_test.csv
+12147500,"NORTH FORK TOLT RIVER NEAR CARNATION, WA",./data/Caravan-CAMELS/12147500.csv,./data/Caravan-CAMELS/12147500_train.csv,./data/Caravan-CAMELS/12147500_test.csv
+12167000,"NF STILLAGUAMISH RIVER NEAR ARLINGTON, WA",./data/Caravan-CAMELS/12167000.csv,./data/Caravan-CAMELS/12167000_train.csv,./data/Caravan-CAMELS/12167000_test.csv
+12175500,"THUNDER CREEK NEAR NEWHALEM, WA",./data/Caravan-CAMELS/12175500.csv,./data/Caravan-CAMELS/12175500_train.csv,./data/Caravan-CAMELS/12175500_test.csv
+12186000,"SAUK RIVER AB WHITECHUCK RIVER NEAR DARRINGTON, WA",./data/Caravan-CAMELS/12186000.csv,./data/Caravan-CAMELS/12186000_train.csv,./data/Caravan-CAMELS/12186000_test.csv
+12189500,"SAUK RIVER NEAR SAUK, WA",./data/Caravan-CAMELS/12189500.csv,./data/Caravan-CAMELS/12189500_train.csv,./data/Caravan-CAMELS/12189500_test.csv
+12381400,South Fork Jocko River near Arlee MT,./data/Caravan-CAMELS/12381400.csv,./data/Caravan-CAMELS/12381400_train.csv,./data/Caravan-CAMELS/12381400_test.csv
+12390700,Prospect Creek at Thompson Falls MT,./data/Caravan-CAMELS/12390700.csv,./data/Caravan-CAMELS/12390700_train.csv,./data/Caravan-CAMELS/12390700_test.csv
+12411000,NF COEUR D ALENE R AB SHOSHONE CK NR PRICHARD ID,./data/Caravan-CAMELS/12411000.csv,./data/Caravan-CAMELS/12411000_train.csv,./data/Caravan-CAMELS/12411000_test.csv
+12451000,"STEHEKIN RIVER AT STEHEKIN, WA",./data/Caravan-CAMELS/12451000.csv,./data/Caravan-CAMELS/12451000_train.csv,./data/Caravan-CAMELS/12451000_test.csv
+12488500,"AMERICAN RIVER NEAR NILE, WA",./data/Caravan-CAMELS/12488500.csv,./data/Caravan-CAMELS/12488500_train.csv,./data/Caravan-CAMELS/12488500_test.csv
+13011500,PACIFIC CREEK AT MORAN WY,./data/Caravan-CAMELS/13011500.csv,./data/Caravan-CAMELS/13011500_train.csv,./data/Caravan-CAMELS/13011500_test.csv
+13011900,BUFFALO FORK AB LAVA CREEK NR MORAN WY,./data/Caravan-CAMELS/13011900.csv,./data/Caravan-CAMELS/13011900_train.csv,./data/Caravan-CAMELS/13011900_test.csv
+13023000,GREYS RIVER AB RESERVOIR NR ALPINE WY,./data/Caravan-CAMELS/13023000.csv,./data/Caravan-CAMELS/13023000_train.csv,./data/Caravan-CAMELS/13023000_test.csv
+13083000,TRAPPER CREEK NR OAKLEY ID,./data/Caravan-CAMELS/13083000.csv,./data/Caravan-CAMELS/13083000_train.csv,./data/Caravan-CAMELS/13083000_test.csv
+13161500,BRUNEAU RIVER AT ROWLAND NV,./data/Caravan-CAMELS/13161500.csv,./data/Caravan-CAMELS/13161500_train.csv,./data/Caravan-CAMELS/13161500_test.csv
+13235000,SF PAYETTE RIVER AT LOWMAN ID,./data/Caravan-CAMELS/13235000.csv,./data/Caravan-CAMELS/13235000_train.csv,./data/Caravan-CAMELS/13235000_test.csv
+13240000,LAKE FORK PAYETTE RIVER AB JUMBO CR NR MCCALL ID,./data/Caravan-CAMELS/13240000.csv,./data/Caravan-CAMELS/13240000_train.csv,./data/Caravan-CAMELS/13240000_test.csv
+13310700,SF SALMON RIVER NR KRASSEL RANGER STATION ID,./data/Caravan-CAMELS/13310700.csv,./data/Caravan-CAMELS/13310700_train.csv,./data/Caravan-CAMELS/13310700_test.csv
+13313000,JOHNSON CREEK AT YELLOW PINE ID,./data/Caravan-CAMELS/13313000.csv,./data/Caravan-CAMELS/13313000_train.csv,./data/Caravan-CAMELS/13313000_test.csv
+13331500,"MINAM RIVER NEAR MINAM, OR",./data/Caravan-CAMELS/13331500.csv,./data/Caravan-CAMELS/13331500_train.csv,./data/Caravan-CAMELS/13331500_test.csv
+14020000,"UMATILLA RIVER ABOVE MEACHAM CREEK, NR GIBBON, OR",./data/Caravan-CAMELS/14020000.csv,./data/Caravan-CAMELS/14020000_train.csv,./data/Caravan-CAMELS/14020000_test.csv
+14096850,"BEAVER CREEK, BLW QUARTZ CR, NR SIMNASHO, OR.",./data/Caravan-CAMELS/14096850.csv,./data/Caravan-CAMELS/14096850_train.csv,./data/Caravan-CAMELS/14096850_test.csv
+14137000,"SANDY RIVER NEAR MARMOT, OR",./data/Caravan-CAMELS/14137000.csv,./data/Caravan-CAMELS/14137000_train.csv,./data/Caravan-CAMELS/14137000_test.csv
+14154500,"ROW RIVER ABOVE PITCHER CREEK NEAR, DORENA, OREG",./data/Caravan-CAMELS/14154500.csv,./data/Caravan-CAMELS/14154500_train.csv,./data/Caravan-CAMELS/14154500_test.csv
+14158500,"MCKENZIE RIVER AT OUTLET OF CLEAR LAKE, OR",./data/Caravan-CAMELS/14158500.csv,./data/Caravan-CAMELS/14158500_train.csv,./data/Caravan-CAMELS/14158500_test.csv
+14166500,"LONG TOM RIVER NEAR NOTI, OREG.",./data/Caravan-CAMELS/14166500.csv,./data/Caravan-CAMELS/14166500_train.csv,./data/Caravan-CAMELS/14166500_test.csv
+14182500,"LITTLE NORTH SANTIAM RIVER NEAR MEHAMA, OR",./data/Caravan-CAMELS/14182500.csv,./data/Caravan-CAMELS/14182500_train.csv,./data/Caravan-CAMELS/14182500_test.csv
+14185000,"SOUTH SANTIAM RIVER BELOW CASCADIA, OR",./data/Caravan-CAMELS/14185000.csv,./data/Caravan-CAMELS/14185000_train.csv,./data/Caravan-CAMELS/14185000_test.csv
+14185900,"QUARTZVILLE CREEK NEAR CASCADIA, OREG.",./data/Caravan-CAMELS/14185900.csv,./data/Caravan-CAMELS/14185900_train.csv,./data/Caravan-CAMELS/14185900_test.csv
+14187000,"WILEY CREEK NEAR FOSTER, OR",./data/Caravan-CAMELS/14187000.csv,./data/Caravan-CAMELS/14187000_train.csv,./data/Caravan-CAMELS/14187000_test.csv
+14216500,"MUDDY CREEK BELOW CLEAR CREEK NEAR COUGAR, WA",./data/Caravan-CAMELS/14216500.csv,./data/Caravan-CAMELS/14216500_train.csv,./data/Caravan-CAMELS/14216500_test.csv
+14222500,"EAST FORK LEWIS RIVER NEAR HEISSON, WA",./data/Caravan-CAMELS/14222500.csv,./data/Caravan-CAMELS/14222500_train.csv,./data/Caravan-CAMELS/14222500_test.csv
+14236200,"TILTON RIVER AB BEAR CANYON CREEK NEAR CINEBAR, WA",./data/Caravan-CAMELS/14236200.csv,./data/Caravan-CAMELS/14236200_train.csv,./data/Caravan-CAMELS/14236200_test.csv
+14301000,"NEHALEM RIVER NEAR FOSS, OR",./data/Caravan-CAMELS/14301000.csv,./data/Caravan-CAMELS/14301000_train.csv,./data/Caravan-CAMELS/14301000_test.csv
+14305500,"SILETZ RIVER AT SILETZ, OR",./data/Caravan-CAMELS/14305500.csv,./data/Caravan-CAMELS/14305500_train.csv,./data/Caravan-CAMELS/14305500_test.csv
+14306500,"ALSEA RIVER NEAR TIDEWATER, OR",./data/Caravan-CAMELS/14306500.csv,./data/Caravan-CAMELS/14306500_train.csv,./data/Caravan-CAMELS/14306500_test.csv
+14308990,"COW CREEK ABV GALESVILLE RES, NR AZALEA, OR.",./data/Caravan-CAMELS/14308990.csv,./data/Caravan-CAMELS/14308990_train.csv,./data/Caravan-CAMELS/14308990_test.csv
+14309500,"WEST FORK COW CREEK NEAR GLENDALE, OR",./data/Caravan-CAMELS/14309500.csv,./data/Caravan-CAMELS/14309500_train.csv,./data/Caravan-CAMELS/14309500_test.csv
+14316700,"STEAMBOAT CREEK NEAR GLIDE, OR",./data/Caravan-CAMELS/14316700.csv,./data/Caravan-CAMELS/14316700_train.csv,./data/Caravan-CAMELS/14316700_test.csv
+14325000,"SOUTH FORK COQUILLE RIVER AT POWERS, OR",./data/Caravan-CAMELS/14325000.csv,./data/Caravan-CAMELS/14325000_train.csv,./data/Caravan-CAMELS/14325000_test.csv
+14400000,"CHETCO RIVER NEAR BROOKINGS, OR",./data/Caravan-CAMELS/14400000.csv,./data/Caravan-CAMELS/14400000_train.csv,./data/Caravan-CAMELS/14400000_test.csv
