@@ -12,6 +12,12 @@ import numpy as np
 
 import HydroErr
 
+# set to wide mode
+def do_stuff_on_page_load():
+    st.set_page_config(layout="wide")
+    
+do_stuff_on_page_load()
+
 # load catchment list
 catchments = pd.read_csv("./data/Caravan-CAMELS/catchments.csv", dtype=str)
 
@@ -21,7 +27,6 @@ decoder = torch.load(
 )
 
 decoder.eval()
-
 
 # Input time series
 st.sidebar.markdown(
