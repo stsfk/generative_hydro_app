@@ -12,10 +12,12 @@ import numpy as np
 
 import HydroErr
 
+
 # set to wide mode
 def do_stuff_on_page_load():
     st.set_page_config(layout="wide")
-    
+
+
 do_stuff_on_page_load()
 
 # load catchment list
@@ -60,46 +62,52 @@ st.sidebar.markdown(
     "## Select an 8-dimensional numerical vector (i.e., the eight parameter values) below to generate a model instance."
 )
 number1 = st.sidebar.slider(
-    "Select parameter 1",
+    "Select value/parameter 1",
     min_value=-11.0,
     max_value=11.0,
     value=0.9585134232789623,
 )
 number2 = st.sidebar.slider(
-    "Select parameter 2",
+    "Select value/parameter 2",
     min_value=-11.0,
     max_value=11.0,
     value=-2.0580436704262253,
 )
 number3 = st.sidebar.slider(
-    "Select parameter 3",
+    "Select value/parameter 3",
     min_value=-11.0,
     max_value=11.0,
     value=3.5006718774709253,
 )
 number4 = st.sidebar.slider(
-    "Select parameter 4", min_value=-11.0, max_value=11.0, value=-6.338297923255598
+    "Select value/parameter 4",
+    min_value=-11.0,
+    max_value=11.0,
+    value=-6.338297923255598,
 )
 number5 = st.sidebar.slider(
-    "Select parameter 5",
+    "Select value/parameter 5",
     min_value=-11.0,
     max_value=11.0,
     value=4.695253736833408,
 )
 number6 = st.sidebar.slider(
-    "Select parameter 6",
+    "Select value/parameter 6",
     min_value=-11.0,
     max_value=11.0,
     value=-6.338297923255598,
 )
 number7 = st.sidebar.slider(
-    "Select parameter 7",
+    "Select value/parameter 7",
     min_value=-11.0,
     max_value=11.0,
     value=-7.455998012226269,
 )
 number8 = st.sidebar.slider(
-    "Select parameter 8", min_value=-11.0, max_value=11.0, value=-6.708498042759972
+    "Select value/parameter 8",
+    min_value=-11.0,
+    max_value=11.0,
+    value=-6.708498042759972,
 )
 
 
@@ -141,7 +149,7 @@ st.markdown(
     "*Use the sidebar to specify the numeric vector values and data sources to generate model instances and run simulations.*"
 )
 
-    
+
 if uploaded_file is not None:
     st.markdown("User supplied catchment data")
 else:
