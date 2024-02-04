@@ -250,14 +250,14 @@ if st.session_state.clicked:
     chart_cal = fn_cal.pred(ga_instance.best_solution()[0])    
     chart_test = fn_test.pred(ga_instance.best_solution()[0])
     
-    # Gof
+    # gof
     kge_cal = round(HydroErr.kge_2009(simulated_array=chart_cal[ "Simulated [mm/day]"], observed_array=chart_cal[ "Observation [mm/day]"]),3)# round(ga_instance.best_solution()[1], 3)
     kge_test = round(HydroErr.kge_2009(simulated_array=chart_test[ "Simulated [mm/day]"], observed_array=chart_test[ "Observation [mm/day]"]),3)# round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
     
     nse_cal = round(HydroErr.nse(simulated_array=chart_cal[ "Simulated [mm/day]"], observed_array=chart_cal[ "Observation [mm/day]"]),3)# round(ga_instance.best_solution()[1], 3)
     nse_test = round(HydroErr.nse(simulated_array=chart_test[ "Simulated [mm/day]"], observed_array=chart_test[ "Observation [mm/day]"]),3)# round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
     
-    
+    # session information
     if uploaded_file_calibration is not None:
         st.markdown("Calibration results of user supplied catchment data.")
     else:
@@ -270,7 +270,7 @@ if st.session_state.clicked:
     st.divider()
 
     # Optimal model parameters
-    st.markdown("Optimal numerical vector in the latent space:")
+    st.markdown("### Optimal numerical vector in the latent space:")
     
     optimal_para = pd.DataFrame(ga_instance.best_solution()[0])
     optimal_para["Latent spae dimension/parameter no."] = range(1, len(optimal_para) + 1)
@@ -281,26 +281,33 @@ if st.session_state.clicked:
     st.divider()
 
     # Show test result:
-    st.write(
-        "### The *test period* simulated and observed discharge data without the warm-up period:"
+    
+    st.markdown(
+        "### Comparison of simulated and observed hydrographs of the *test period* (without the warm-up period):"
     )
 
     st.line_chart(chart_test, color=["#0457ac", "#a7e237"])
     f":red[**Test KGE={kge_test}**], :red[**Test NSE={nse_test}**]."
 
+    st.write(
+        "### The *test period* simulated and observed discharge data (without the warm-up period):"
+    )
     st.dataframe(chart_test)
 
     st.divider()
 
     # Show calibration result:
-    st.write(
-        "### The *calibration period* simulated and observed discharge data without the warm-up period:"
+    st.markdown(
+        "### Comparison of simulated and observed hydrographs of the *calibration period:* (without the warm-up period):"
     )
 
     st.line_chart(chart_cal, color=["#0457ac", "#a7e237"])
 
     f":red[**Calibration KGE={kge_cal}**], :red[**Calibration NSE={nse_cal}**]."
 
+    st.write(
+        "### The *calibration period* simulated and observed discharge data (without the warm-up period):"
+    )
     st.dataframe(chart_cal)
     
     st.session_state.clicked = False
