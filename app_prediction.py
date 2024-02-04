@@ -134,7 +134,7 @@ chart_data = pd.DataFrame(data=d)
 # Plotting
 st.header("Generative Hydrological Modeling")
 st.subheader(
-    "Generating hydrological model instances from numerical vectors in the latent space for hydrogical prediction."
+    "Generating hydrological model instances from numerical vectors in the latent space for hydrological prediction."
 )
 
 st.markdown(
@@ -199,7 +199,7 @@ f"Performance of the generated model instance in the displayed period: :red[**KG
 # Display data
 st.divider()
 
-st.write("The predicted and observed discharge data without the warm-up period:")
+st.write("The simulated and observed discharge data without the warm-up period:")
 st.write(chart_data)
 
 # References:
