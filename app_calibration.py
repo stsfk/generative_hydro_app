@@ -14,6 +14,12 @@ import HydroErr
 
 import pygad
 
+# set to wide mode
+def do_stuff_on_page_load():
+    st.set_page_config(layout="wide")
+    
+do_stuff_on_page_load()
+
 # load catchment list
 catchments = pd.read_csv("./data/Caravan-CAMELS/catchments.csv", dtype=str)
 
@@ -37,7 +43,6 @@ decoder = torch.load(
 )
 
 decoder.eval()
-
 
 # Input calibration time series
 
@@ -239,29 +244,39 @@ st.button(":blue[Run optimization]", on_click=click_button)
 
 if st.session_state.clicked:
     
+    # run simulation
     ga_instance.run()
     
+    chart_cal = fn_cal.pred(ga_instance.best_solution()[0])    
+    chart_test = fn_test.pred(ga_instance.best_solution()[0])
+    
     # Gof
-    kge_cal = round(ga_instance.best_solution()[1], 3)
-    kge_test = round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
+    kge_cal = round(HydroErr.kge_2009(simulated_array=chart_cal[ "Simulated [mm/day]"], observed_array=chart_cal[ "Observation [mm/day]"]),3)# round(ga_instance.best_solution()[1], 3)
+    kge_test = round(HydroErr.kge_2009(simulated_array=chart_test[ "Simulated [mm/day]"], observed_array=chart_test[ "Observation [mm/day]"]),3)# round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
+    
+    nse_cal = round(HydroErr.nse(simulated_array=chart_cal[ "Simulated [mm/day]"], observed_array=chart_cal[ "Observation [mm/day]"]),3)# round(ga_instance.best_solution()[1], 3)
+    nse_test = round(HydroErr.nse(simulated_array=chart_test[ "Simulated [mm/day]"], observed_array=chart_test[ "Observation [mm/day]"]),3)# round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
+    
     
     if uploaded_file_calibration is not None:
-        st.markdown("Calibration results of user supplied catchment data")
+        st.markdown("Calibration results of user supplied catchment data.")
     else:
         st.markdown(
-            f"Calibration results of the :red[{selected_catchment}, USA]."
+            f"Calibration results of the :red[{selected_catchment}, USA]. Calibration period: 1981-01-01 to 1995-12-31; Test period: 1996-01-01 to 2014-12-31."
         )
 
-    f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**]."
+    f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**];  :red[**Calibration NSE={nse_cal}**], :red[**Test NSE={nse_test}**]."
 
     st.divider()
 
     # Optimal model parameters
+    st.markdown("Optimal numerical vector in the latent space:")
+    
     optimal_para = pd.DataFrame(ga_instance.best_solution()[0])
-    optimal_para["Parameter no."] = range(1, len(optimal_para) + 1)
+    optimal_para["Latent spae dimension/parameter no."] = range(1, len(optimal_para) + 1)
 
-    optimal_para.columns = ["Optimal value", "Parameter number"]
-    st.dataframe(optimal_para[["Parameter number","Optimal value"]], hide_index=True)
+    optimal_para.columns = ["Optimal value", "Latent spae dimension/parameter no."]
+    st.dataframe(optimal_para[["Latent spae dimension/parameter no.","Optimal value"]], hide_index=True)
     
     st.divider()
 
@@ -270,12 +285,10 @@ if st.session_state.clicked:
         "### The *test period* simulated and observed discharge data without the warm-up period:"
     )
 
-    chart_test = fn_test.pred(ga_instance.best_solution()[0])
-
     st.line_chart(chart_test, color=["#0457ac", "#a7e237"])
-    f":red[**Test KGE={kge_test}**]."
+    f":red[**Test KGE={kge_test}**], :red[**Test NSE={nse_test}**]."
 
-    chart_test
+    st.dataframe(chart_test)
 
     st.divider()
 
@@ -284,13 +297,11 @@ if st.session_state.clicked:
         "### The *calibration period* simulated and observed discharge data without the warm-up period:"
     )
 
-    chart_cal = fn_cal.pred(ga_instance.best_solution()[0])
-
     st.line_chart(chart_cal, color=["#0457ac", "#a7e237"])
 
-    f":red[**Calibration KGE={kge_cal}**]."
+    f":red[**Calibration KGE={kge_cal}**], :red[**Calibration NSE={nse_cal}**]."
 
-    chart_cal
+    st.dataframe(chart_cal)
     
     st.session_state.clicked = False
 
