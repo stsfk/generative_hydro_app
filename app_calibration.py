@@ -71,7 +71,8 @@ uploaded_file_test = st.sidebar.file_uploader(
 
 
 if uploaded_file_calibration is not None:
-    input_data = np.genfromtxt(uploaded_file_calibration, delimiter=",")
+    input_data = pd.read_csv(uploaded_file_calibration, delimiter=",", header=None)
+    input_data = input_data.to_numpy()
     x_cal = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
     y_cal = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
 else:
@@ -84,7 +85,8 @@ else:
 
 
 if uploaded_file_test is not None:
-    input_data = np.genfromtxt(uploaded_file_test, delimiter=",")
+    input_data = pd.read_csv(uploaded_file_test, delimiter=",", header=None)
+    input_data = input_data.to_numpy()
     x_test = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
     y_test = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
 else:
@@ -114,7 +116,7 @@ num_generations = st.sidebar.number_input(
     "Input the number of generations.",
     min_value=2,
     max_value=500,
-    value=30,
+    value=42,
 )
 
 # input sol_per_pop
@@ -124,7 +126,7 @@ sol_per_pop = st.sidebar.number_input(
     "Input the population size.",
     min_value=20,
     max_value=500,
-    value=40,
+    value=42,
 )
 
 
@@ -135,7 +137,7 @@ num_parents_mating = st.sidebar.number_input(
     "Input the number of solutions to be selected as parents.",
     min_value=2,
     max_value=sol_per_pop,
-    value=10,
+    value=16,
 )
 
 

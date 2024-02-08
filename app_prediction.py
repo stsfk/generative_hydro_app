@@ -50,7 +50,8 @@ uploaded_file = st.sidebar.file_uploader(
 )
 
 if uploaded_file is not None:
-    input_data = np.genfromtxt(uploaded_file, delimiter=",")
+    input_data = pd.read_csv(uploaded_file, delimiter=",", header=None)
+    input_data = input_data.to_numpy()
     x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
     optimal_para=[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
 else:
