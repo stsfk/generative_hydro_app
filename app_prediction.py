@@ -23,6 +23,9 @@ do_stuff_on_page_load()
 # load catchment list
 catchments = pd.read_csv("./data/Caravan-CAMELS/catchments.csv", dtype=str)
 
+# load optimal parameters
+optimal_paras = np.genfromtxt("./data/camels_embeddings.csv", delimiter=",")
+
 # load model
 decoder = torch.load(
     "data/final_lstm_decoder_test.pt", map_location=torch.device("cpu")
@@ -49,7 +52,10 @@ uploaded_file = st.sidebar.file_uploader(
 if uploaded_file is not None:
     input_data = np.genfromtxt(uploaded_file, delimiter=",")
     x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
+    optimal_para=[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
 else:
+    index = catchments[catchments["gauge_name"] == selected_catchment].index.tolist()
+    optimal_para = optimal_paras[index[0],:].tolist()
     file_name = catchments[catchments["gauge_name"] == selected_catchment][
         "data_all"
     ].to_string(index=False)
@@ -65,49 +71,49 @@ number1 = st.sidebar.slider(
     "Select value/parameter 1",
     min_value=-11.0,
     max_value=11.0,
-    value=0.9585134232789623,
+    value=optimal_para[0],
 )
 number2 = st.sidebar.slider(
     "Select value/parameter 2",
     min_value=-11.0,
     max_value=11.0,
-    value=-2.0580436704262253,
+    value=optimal_para[1],
 )
 number3 = st.sidebar.slider(
     "Select value/parameter 3",
     min_value=-11.0,
     max_value=11.0,
-    value=3.5006718774709253,
+    value=optimal_para[2],
 )
 number4 = st.sidebar.slider(
     "Select value/parameter 4",
     min_value=-11.0,
     max_value=11.0,
-    value=-6.338297923255598,
+    value=optimal_para[3],
 )
 number5 = st.sidebar.slider(
     "Select value/parameter 5",
     min_value=-11.0,
     max_value=11.0,
-    value=4.695253736833408,
+    value=optimal_para[4],
 )
 number6 = st.sidebar.slider(
     "Select value/parameter 6",
     min_value=-11.0,
     max_value=11.0,
-    value=-6.338297923255598,
+    value=optimal_para[5],
 )
 number7 = st.sidebar.slider(
     "Select value/parameter 7",
     min_value=-11.0,
     max_value=11.0,
-    value=-7.455998012226269,
+    value=optimal_para[6],
 )
 number8 = st.sidebar.slider(
     "Select value/parameter 8",
     min_value=-11.0,
     max_value=11.0,
-    value=-6.708498042759972,
+    value=optimal_para[7],
 )
 
 
