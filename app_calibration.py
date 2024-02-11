@@ -126,7 +126,7 @@ sol_per_pop = st.sidebar.number_input(
     "Input the population size.",
     min_value=20,
     max_value=500,
-    value=42,
+    value=28,
 )
 
 
