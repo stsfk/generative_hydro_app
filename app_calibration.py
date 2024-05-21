@@ -20,6 +20,9 @@ def do_stuff_on_page_load():
     
 do_stuff_on_page_load()
 
+# device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 # load catchment list
 catchments = pd.read_csv("./data/Caravan-CAMELS/catchments.csv", dtype=str)
 
@@ -41,6 +44,8 @@ st.markdown(
 decoder = torch.load(
     "data/final_lstm_decoder_test.pt", map_location=torch.device("cpu")
 )
+
+decoder.to(device=device)
 
 decoder.eval()
 
@@ -73,29 +78,29 @@ uploaded_file_test = st.sidebar.file_uploader(
 if uploaded_file_calibration is not None:
     input_data = pd.read_csv(uploaded_file_calibration, delimiter=",", header=None)
     input_data = input_data.to_numpy()
-    x_cal = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
-    y_cal = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
+    x_cal = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+    y_cal = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
 else:
     file_name = catchments[catchments["gauge_name"] == selected_catchment][
         "data_train"
     ].to_string(index=False)
     input_data = np.genfromtxt(file_name, delimiter=",")
-    x_cal = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
-    y_cal = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
+    x_cal = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+    y_cal = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
 
 
 if uploaded_file_test is not None:
     input_data = pd.read_csv(uploaded_file_test, delimiter=",", header=None)
     input_data = input_data.to_numpy()
-    x_test = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
-    y_test = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
+    x_test = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+    y_test = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
 else:
     file_name = catchments[catchments["gauge_name"] == selected_catchment][
         "data_test"
     ].to_string(index=False)
     input_data = np.genfromtxt(file_name, delimiter=",")
-    x_test = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
-    y_test = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32)
+    x_test = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+    y_test = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
 
 
 # input warm-up period
@@ -148,7 +153,7 @@ class Objective_builder:
 
     def eval(self, ga_instance, solution, solution_idx):
         # numpy to torch tensor
-        solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32)
+        solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32).to(device=device)
         solution = solution.expand(self.x.shape[0], -1)
 
         # BASE_LENGTH is from global
@@ -166,7 +171,7 @@ class Objective_builder:
 
     def pred(self, solution):
         # numpy to torch tensor
-        solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32)
+        solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32).to(device=device)
         solution = solution.expand(self.x.shape[0], -1)
 
         # BASE_LENGTH is from global
