@@ -20,6 +20,9 @@ def do_stuff_on_page_load():
 
 do_stuff_on_page_load()
 
+# device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 # load catchment list
 catchments = pd.read_csv("./data/Caravan-CAMELS/catchments.csv", dtype=str)
 
@@ -30,6 +33,8 @@ optimal_paras = np.genfromtxt("./data/camels_embeddings.csv", delimiter=",")
 decoder = torch.load(
     "data/final_lstm_decoder_test.pt", map_location=torch.device("cpu")
 )
+
+decoder.to(device=device)
 
 decoder.eval()
 
@@ -52,7 +57,7 @@ uploaded_file = st.sidebar.file_uploader(
 if uploaded_file is not None:
     input_data = pd.read_csv(uploaded_file, delimiter=",", header=None)
     input_data = input_data.to_numpy()
-    x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
+    x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
     optimal_para=[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
 else:
     index = catchments[catchments["gauge_name"] == selected_catchment].index.tolist()
@@ -61,7 +66,7 @@ else:
         "data_all"
     ].to_string(index=False)
     input_data = np.genfromtxt(file_name, delimiter=",")
-    x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32)
+    x = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
 
 
 # input parameter values
@@ -69,49 +74,49 @@ st.sidebar.markdown(
     "## Select an 8-dimensional numerical vector (i.e., the eight parameter values) below to generate a model instance."
 )
 number1 = st.sidebar.slider(
-    "Select value/parameter 1",
+    "Select value of parameter 1",
     min_value=-11.0,
     max_value=11.0,
     value=optimal_para[0],
 )
 number2 = st.sidebar.slider(
-    "Select value/parameter 2",
+    "Select value of parameter 2",
     min_value=-11.0,
     max_value=11.0,
     value=optimal_para[1],
 )
 number3 = st.sidebar.slider(
-    "Select value/parameter 3",
+    "Select value of parameter 3",
     min_value=-11.0,
     max_value=11.0,
     value=optimal_para[2],
 )
 number4 = st.sidebar.slider(
-    "Select value/parameter 4",
+    "Select value of parameter 4",
     min_value=-11.0,
     max_value=11.0,
     value=optimal_para[3],
 )
 number5 = st.sidebar.slider(
-    "Select value/parameter 5",
+    "Select value of parameter 5",
     min_value=-11.0,
     max_value=11.0,
     value=optimal_para[4],
 )
 number6 = st.sidebar.slider(
-    "Select value/parameter 6",
+    "Select value of parameter 6",
     min_value=-11.0,
     max_value=11.0,
     value=optimal_para[5],
 )
 number7 = st.sidebar.slider(
-    "Select value/parameter 7",
+    "Select value of parameter 7",
     min_value=-11.0,
     max_value=11.0,
     value=optimal_para[6],
 )
 number8 = st.sidebar.slider(
-    "Select value/parameter 8",
+    "Select value of parameter 8",
     min_value=-11.0,
     max_value=11.0,
     value=optimal_para[7],
@@ -133,7 +138,7 @@ solution = np.array(
     [number1, number2, number3, number4, number5, number6, number7, number8]
 )
 
-solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32)
+solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32).to(device=device)
 solution = solution.expand(x.shape[0], -1)
 
 pred = decoder.decode(solution, x, base_length=warm_up).view(-1).detach().cpu().numpy()
