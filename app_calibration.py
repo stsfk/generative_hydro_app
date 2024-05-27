@@ -14,10 +14,14 @@ import HydroErr
 
 import pygad
 
+import random
+
+
 # set to wide mode
 def do_stuff_on_page_load():
     st.set_page_config(layout="wide")
-    
+
+
 do_stuff_on_page_load()
 
 # device
@@ -33,7 +37,9 @@ st.subheader(
     "Hydrological model calibration: search the latent space to identify the optimal numerical vectors for generating hydrological model instances."
 )
 
-st.markdown("*Use the sidebar to specify data sources and genetic algorithm (GA) parameter values.*")
+st.markdown(
+    "*Use the sidebar to specify data sources and genetic algorithm (GA) parameter values.*"
+)
 
 
 st.markdown(
@@ -78,29 +84,69 @@ uploaded_file_test = st.sidebar.file_uploader(
 if uploaded_file_calibration is not None:
     input_data = pd.read_csv(uploaded_file_calibration, delimiter=",", header=None)
     input_data = input_data.to_numpy()
-    x_cal = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
-    y_cal = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+    x_cal = (
+        torch.from_numpy(input_data[:, 0:3])
+        .unsqueeze(0)
+        .to(dtype=torch.float32)
+        .to(device=device)
+    )
+    y_cal = (
+        torch.from_numpy(input_data[:, 3])
+        .unsqueeze(0)
+        .to(dtype=torch.float32)
+        .to(device=device)
+    )
 else:
     file_name = catchments[catchments["gauge_name"] == selected_catchment][
         "data_train"
     ].to_string(index=False)
     input_data = np.genfromtxt(file_name, delimiter=",")
-    x_cal = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
-    y_cal = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+    x_cal = (
+        torch.from_numpy(input_data[:, 0:3])
+        .unsqueeze(0)
+        .to(dtype=torch.float32)
+        .to(device=device)
+    )
+    y_cal = (
+        torch.from_numpy(input_data[:, 3])
+        .unsqueeze(0)
+        .to(dtype=torch.float32)
+        .to(device=device)
+    )
 
 
 if uploaded_file_test is not None:
     input_data = pd.read_csv(uploaded_file_test, delimiter=",", header=None)
     input_data = input_data.to_numpy()
-    x_test = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
-    y_test = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+    x_test = (
+        torch.from_numpy(input_data[:, 0:3])
+        .unsqueeze(0)
+        .to(dtype=torch.float32)
+        .to(device=device)
+    )
+    y_test = (
+        torch.from_numpy(input_data[:, 3])
+        .unsqueeze(0)
+        .to(dtype=torch.float32)
+        .to(device=device)
+    )
 else:
     file_name = catchments[catchments["gauge_name"] == selected_catchment][
         "data_test"
     ].to_string(index=False)
     input_data = np.genfromtxt(file_name, delimiter=",")
-    x_test = torch.from_numpy(input_data[:, 0:3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
-    y_test = torch.from_numpy(input_data[:, 3]).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+    x_test = (
+        torch.from_numpy(input_data[:, 0:3])
+        .unsqueeze(0)
+        .to(dtype=torch.float32)
+        .to(device=device)
+    )
+    y_test = (
+        torch.from_numpy(input_data[:, 3])
+        .unsqueeze(0)
+        .to(dtype=torch.float32)
+        .to(device=device)
+    )
 
 
 # input warm-up period
@@ -113,6 +159,15 @@ warm_up = st.sidebar.number_input(
     value=min(365, x_cal.shape[1]),
 )
 
+# input a random seed of GA
+st.sidebar.markdown("## Select the random seed of generations of GA.")
+
+random_seed = st.sidebar.number_input(
+    "Input a random seed.",
+    min_value=0,
+    max_value= 4294967295,
+    value=random.randint(0, 4294967295),
+)
 
 # input number of generaion
 st.sidebar.markdown("## Select the number of generations of GA.")
@@ -153,7 +208,12 @@ class Objective_builder:
 
     def eval(self, ga_instance, solution, solution_idx):
         # numpy to torch tensor
-        solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+        solution = (
+            torch.from_numpy(solution)
+            .unsqueeze(0)
+            .to(dtype=torch.float32)
+            .to(device=device)
+        )
         solution = solution.expand(self.x.shape[0], -1)
 
         # BASE_LENGTH is from global
@@ -171,7 +231,12 @@ class Objective_builder:
 
     def pred(self, solution):
         # numpy to torch tensor
-        solution = torch.from_numpy(solution).unsqueeze(0).to(dtype=torch.float32).to(device=device)
+        solution = (
+            torch.from_numpy(solution)
+            .unsqueeze(0)
+            .to(dtype=torch.float32)
+            .to(device=device)
+        )
         solution = solution.expand(self.x.shape[0], -1)
 
         # BASE_LENGTH is from global
@@ -193,6 +258,7 @@ class Objective_builder:
         chart_data = pd.DataFrame(data=d)
 
         return chart_data
+
 
 # Hyperparameters of GA
 num_genes = 8
@@ -235,6 +301,7 @@ ga_instance = pygad.GA(
     sol_per_pop=sol_per_pop,
     num_genes=num_genes,
     init_range_low=init_range_low,
+    random_seed = random_seed,
     init_range_high=init_range_high,
     parent_selection_type=parent_selection_type,
     crossover_type=crossover_type,
@@ -243,52 +310,90 @@ ga_instance = pygad.GA(
     on_generation=on_generation,
 )
 
+
 def click_button():
     st.session_state.clicked = True
-    
+
 
 st.button(":blue[Run optimization]", on_click=click_button)
 
 if st.session_state.clicked:
-    
+
     # run simulation
     ga_instance.run()
-    
-    chart_cal = fn_cal.pred(ga_instance.best_solution()[0])    
+
+    chart_cal = fn_cal.pred(ga_instance.best_solution()[0])
     chart_test = fn_test.pred(ga_instance.best_solution()[0])
-    
+
     # gof
-    kge_cal = round(HydroErr.kge_2009(simulated_array=chart_cal[ "Simulated [mm/day]"], observed_array=chart_cal[ "Observation [mm/day]"]),3)# round(ga_instance.best_solution()[1], 3)
-    kge_test = round(HydroErr.kge_2009(simulated_array=chart_test[ "Simulated [mm/day]"], observed_array=chart_test[ "Observation [mm/day]"]),3)# round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
-    
-    nse_cal = round(HydroErr.nse(simulated_array=chart_cal[ "Simulated [mm/day]"], observed_array=chart_cal[ "Observation [mm/day]"]),3)# round(ga_instance.best_solution()[1], 3)
-    nse_test = round(HydroErr.nse(simulated_array=chart_test[ "Simulated [mm/day]"], observed_array=chart_test[ "Observation [mm/day]"]),3)# round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
-    
+    kge_cal = round(
+        HydroErr.kge_2009(
+            simulated_array=chart_cal["Simulated [mm/day]"],
+            observed_array=chart_cal["Observation [mm/day]"],
+        ),
+        3,
+    )  # round(ga_instance.best_solution()[1], 3)
+    kge_test = round(
+        HydroErr.kge_2009(
+            simulated_array=chart_test["Simulated [mm/day]"],
+            observed_array=chart_test["Observation [mm/day]"],
+        ),
+        3,
+    )  # round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
+
+    nse_cal = round(
+        HydroErr.nse(
+            simulated_array=chart_cal["Simulated [mm/day]"],
+            observed_array=chart_cal["Observation [mm/day]"],
+        ),
+        3,
+    )  # round(ga_instance.best_solution()[1], 3)
+    nse_test = round(
+        HydroErr.nse(
+            simulated_array=chart_test["Simulated [mm/day]"],
+            observed_array=chart_test["Observation [mm/day]"],
+        ),
+        3,
+    )  # round(fn_test.eval(0, ga_instance.best_solution()[0], 0), 3)
+
     # session information
     if uploaded_file_calibration is not None:
         st.markdown("Calibration results of user supplied catchment data.")
+    elif selected_catchment == "La Bruche a Russ [Wisches], France":
+        st.markdown(
+            f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**];  :red[**Calibration NSE={nse_cal}**], :red[**Test NSE={nse_test}**]."
+        )
+        st.markdown(
+            f"Calibration results of the :red[La Bruche a Russ [Wisches], France]. Calibration period: 1999-01-01 to 2008-12-31; Test period: 2009-01-01 to 2018-12-31."
+        )
     else:
+        st.markdown(
+            f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**];  :red[**Calibration NSE={nse_cal}**], :red[**Test NSE={nse_test}**]."
+        )
         st.markdown(
             f"Calibration results of the :red[{selected_catchment}, USA]. Calibration period: 1981-01-01 to 1995-12-31; Test period: 1996-01-01 to 2014-12-31."
         )
-
-    f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**];  :red[**Calibration NSE={nse_cal}**], :red[**Test NSE={nse_test}**]."
 
     st.divider()
 
     # Optimal model parameters
     st.markdown("### Optimal numerical vector in the latent space:")
-    
+
     optimal_para = pd.DataFrame(ga_instance.best_solution()[0])
-    optimal_para["Latent spae dimension/parameter no."] = range(1, len(optimal_para) + 1)
+    optimal_para["Latent spae dimension/parameter no."] = range(
+        1, len(optimal_para) + 1
+    )
 
     optimal_para.columns = ["Optimal value", "Latent spae dimension/parameter no."]
-    st.dataframe(optimal_para[["Latent spae dimension/parameter no.","Optimal value"]], hide_index=True)
-    
+    st.dataframe(
+        optimal_para[["Latent spae dimension/parameter no.", "Optimal value"]],
+        hide_index=True,
+    )
+
     st.divider()
 
     # Show test result:
-    
+
     st.markdown(
         "### Comparison of simulated and observed hydrographs of the *test period* (without the warm-up period):"
     )
@@ -316,7 +421,7 @@ if st.session_state.clicked:
         "### The *calibration period* simulated and observed discharge data (without the warm-up period):"
     )
     st.dataframe(chart_cal)
-    
+
     st.session_state.clicked = False
 
 
@@ -327,7 +432,7 @@ st.markdown(
     "The method for developing generative hydrological model is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
 )
 st.caption(
-    "The CAMELS catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w). License of the dataset can be found in the GitHub page of this web appplication."
+    "The catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w) and the [airGRdatasets R package](https://cran.r-project.org/package=airGRdatasets). License of the dataset can be found in the GitHub page of this web appplication."
 )
 
 st.markdown(

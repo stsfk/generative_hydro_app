@@ -1,5 +1,6 @@
 gauge_id,gauge_name,data_all,data_train,data_test
 01022500,"Narraguagus River at Cherryfield, Maine",./data/Caravan-CAMELS/01022500.csv,./data/Caravan-CAMELS/01022500_train.csv,./data/Caravan-CAMELS/01022500_test.csv
+A273011002,"La Bruche a Russ [Wisches], France",./data/Caravan-CAMELS/A273011002.csv,./data/Caravan-CAMELS/A273011002_train.csv,./data/Caravan-CAMELS/A273011002_test.csv
 01031500,"Piscataquis River near Dover-Foxcroft, Maine",./data/Caravan-CAMELS/01031500.csv,./data/Caravan-CAMELS/01031500_train.csv,./data/Caravan-CAMELS/01031500_test.csv
 01047000,"Carrabassett River near North Anson, Maine",./data/Caravan-CAMELS/01047000.csv,./data/Caravan-CAMELS/01047000_train.csv,./data/Caravan-CAMELS/01047000_test.csv
 01052500,"Diamond River near Wentworth Location, NH",./data/Caravan-CAMELS/01052500.csv,./data/Caravan-CAMELS/01052500_train.csv,./data/Caravan-CAMELS/01052500_test.csv
