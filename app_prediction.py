@@ -40,11 +40,11 @@ decoder.eval()
 
 # Input time series
 st.sidebar.markdown(
-    "## Select a catchment from the CAMELS dataset or upload a climate forcing and discharge time series."
+    "## Select a catchment from the Caravan dataset or upload a climate forcing and discharge time series."
 )
 
 selected_catchment = st.sidebar.selectbox(
-    "Which CAMELS catchment do you want to model?",
+    "Which of the Caravan catchment areas in the USA do you want to model?",
     catchments["gauge_name"].tolist(),
     index=0,
     placeholder="Choose a catchment...",
@@ -81,7 +81,7 @@ else:
 
 # input parameter values
 st.sidebar.markdown(
-    "## Select an 8-dimensional numerical vector (i.e., the eight parameter values) below to generate a model instance."
+    "## Select an 8-dimensional latent variable (i.e., parameters) values below to define a discharge prediction model."
 )
 number1 = st.sidebar.slider(
     "Select value of parameter 1",
@@ -166,11 +166,11 @@ chart_data = pd.DataFrame(data=d)
 # Plotting
 st.header("Generative Hydrological Modeling")
 st.subheader(
-    "Generating hydrological model instances from numerical vectors in the latent space for hydrological prediction."
+    "Generating catchment runoff hydrograph predictions according to latent variable values that describe the hydrological characteristics of a catchment."
 )
 
 st.markdown(
-    "*Use the sidebar to specify the numeric vector values and data sources to generate model instances and run simulations.*"
+    "*Use the sidebar to specify the latent variable (i.e., parameters) values and data sources to define a discharge prediction model and run simulations.*"
 )
 
 
@@ -183,13 +183,9 @@ st.markdown(
 
 if uploaded_file is not None:
     st.markdown("User supplied catchment data.")
-elif selected_catchment != "La Bruche a Russ [Wisches], France":
-    st.markdown(
-        f"Comparison of simulated and observed hydrographs of the :red[{selected_catchment}, USA]."
-    )
 else:
     st.markdown(
-        f"Comparison of simulated and observed hydrographs of the :red[{selected_catchment}]."
+       f"Comparison of simulated and observed hydrographs of the :red[{selected_catchment}, USA]." 
     )
 
 
@@ -204,11 +200,6 @@ st.line_chart(
     chart_data[dispaly_days[0] : dispaly_days[1]], color=["#0457ac", "#a7e237"]
 )
 
-if uploaded_file is None and selected_catchment != "La Bruche a Russ [Wisches], France":
-    st.caption(
-        "Simulation starts from 1981-01-01, and the warm-up period is not shown. Data are from the Caravan dataset."
-    )
-
 
 # Prediction accuracy
 
@@ -218,7 +209,7 @@ kge = round(kge, 3)
 nse = HydroErr.nse(simulated_array=pred, observed_array=input_data[warm_up:, 3])
 nse = round(nse, 3)
 
-f"Performance of the generated model instance on all data: :red[**KGE={kge}**], :red[**NSE={nse}**]."
+f"Performance of the generative model on all data: :red[**KGE={kge}**], :red[**NSE={nse}**]."
 
 
 # Prediction accuracy of displayed period
@@ -238,7 +229,7 @@ nse2 = HydroErr.nse(
 )
 nse2 = round(nse2, 3)
 
-f"Performance of the generated model instance in the displayed period: :red[**KGE={kge2}**], :red[**NSE={nse2}**]."
+f"Performance of the generative model in the displayed period: :red[**KGE={kge2}**], :red[**NSE={nse2}**]."
 
 # Display data
 st.divider()
@@ -253,7 +244,7 @@ st.markdown(
     "The method for developing generative hydrological model is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
 )
 st.caption(
-    "The catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w) and the [airGRdatasets R package](https://cran.r-project.org/package=airGRdatasets). License of the dataset can be found in the GitHub page of this web appplication."
+    "The catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w). License of the dataset can be found in the GitHub page of this web appplication."
 )
 
 st.markdown(
