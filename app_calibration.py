@@ -34,7 +34,7 @@ catchments = pd.read_csv("./data/Caravan-CAMELS/catchments.csv", dtype=str)
 st.header("Generative hydrological modeling")
 
 st.subheader(
-    "Hydrological model calibration: search the latent space to identify the optimal numerical vectors for generating hydrological model instances."
+    "Hydrological model calibration: search the 8-dimensional latent space to identify the optimal numerical vectors for defining discharge prediction model."
 )
 
 st.markdown(
@@ -58,7 +58,7 @@ decoder.eval()
 # Input calibration time series
 
 st.sidebar.markdown(
-    "## Select a catchment from the CAMELS dataset or upload a climate forcing and discharge time series."
+    "## Select a catchment from the Caravan dataset or upload a climate forcing and discharge time series."
 )
 
 selected_catchment = st.sidebar.selectbox(
@@ -359,16 +359,9 @@ if st.session_state.clicked:
     # session information
     if uploaded_file_calibration is not None:
         st.markdown("Calibration results of user supplied catchment data.")
-    elif selected_catchment == "La Bruche a Russ [Wisches], France":
-        st.markdown(
-            f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**];  :red[**Calibration NSE={nse_cal}**], :red[**Test NSE={nse_test}**]."
-        )
-        st.markdown(
-            f"Calibration results of the :red[La Bruche a Russ [Wisches], France]. Calibration period: 1999-01-01 to 2008-12-31; Test period: 2009-01-01 to 2018-12-31."
-        )
     else:
         st.markdown(
-            f"Performance of the optimal (i.e., calibrated) model instance: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**];  :red[**Calibration NSE={nse_cal}**], :red[**Test NSE={nse_test}**]."
+            f"Performance of generative model with optimized latent variable values: :red[**Calibration KGE={kge_cal}**], :red[**Test KGE={kge_test}**];  :red[**Calibration NSE={nse_cal}**], :red[**Test NSE={nse_test}**]."
         )
         st.markdown(
             f"Calibration results of the :red[{selected_catchment}, USA]. Calibration period: 1981-01-01 to 1995-12-31; Test period: 1996-01-01 to 2014-12-31."
@@ -432,7 +425,7 @@ st.markdown(
     "The method for developing generative hydrological model is discribed in the paper: [Learning to Generate Lumped Hydrological Models](https://arxiv.org/abs/2309.09904)."
 )
 st.caption(
-    "The catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w) and the [airGRdatasets R package](https://cran.r-project.org/package=airGRdatasets). License of the dataset can be found in the GitHub page of this web appplication."
+    "The catchment data was derived from the [Caravan dataset](https://doi.org/10.1038/s41597-023-01975-w). License of the dataset can be found in the GitHub page of this web appplication."
 )
 
 st.markdown(
